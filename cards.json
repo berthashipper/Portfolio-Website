@@ -95,7 +95,7 @@
       {
         "id": "project-1",
         "type": "project",
-        "dataTags": "p5.js web audio api hci neuro-computing frontend ux/ui javascript cognitive modeling interactive design",
+        "dataTags": "p5.js web audio api hci neuro-computing frontend ux ui javascript cognitive modeling interactive design neuroscience",
         "date": "Feb 2026",
         "title": "The Flow State",
         "award": false,
@@ -145,7 +145,7 @@
       {
         "id": "project-3",
         "type": "project",
-        "dataTags": "javascript html css web development frontend product development ux/ui algorithms",
+        "dataTags": "javascript html css web development frontend product development ux ui algorithms",
         "date": "Apr 2025",
         "title": "Ping Pong Tournament Management System",
         "award": false,
@@ -172,7 +172,7 @@
       {
         "id": "project-4",
         "type": "project",
-        "dataTags": "java android sdk mvc architecture product design mobile app development algorithms ux/ui software engineering",
+        "dataTags": "java android sdk mvc architecture product design mobile app development algorithms ux ui software engineering",
         "date": "Sep – Dec 2024",
         "title": "Pantry Pal: Kitchen Application",
         "award": "People's Choice Award @ NYCWiC 2025",

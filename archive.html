@@ -44,7 +44,7 @@
             border: 1px solid var(--border); 
             padding: 2.5rem; 
             border-radius: 20px; 
-            display: flex; 
+            display: none; /* Hidden by default, shown by JS */
             flex-direction: column;
             height: 100%;
         }
@@ -85,68 +85,107 @@
         
         <div id="active-filter-msg" class="filter-status"></div>
 
-        <div class="archive-grid" id="archive-grid"></div>
+        <div class="archive-grid" id="master-grid">
+            
+            <div class="archive-card" data-tags="ml nlp python ai java software">
+                <span class="type-badge">Experience</span>
+                <div class="experience-header">
+                    <span class="experience-date">Dec 2025 – Present</span>
+                    <h3>Incoming AI/ML Digital Technology Intern</h3>
+                    <span class="company-name">Guardian Life</span>
+                    <span class="location">New York, NY • On-site</span>
+                </div>
+                <div class="experience-content">
+                    <ul class="bullet-list">
+                        <li>Developing GenAI applications and digital assistants to streamline internal workflows.</li>
+                        <li>Researching NLP and LLM technologies for application in global financial services and insurance.</li>
+                    </ul>
+                </div>
+                <div class="tag-container">
+                    <span class="tag">AI/ML</span><span class="tag">LLM</span><span class="tag">NLP</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">Software</span>
+                </div>
+            </div>
+        
+            <div class="archive-card" data-tags="p5.js web audio api hci neuro-computing frontend ux/ui javascript cognitive modeling interactive design">
+                <span class="type-badge">Project</span>
+                <div class="experience-header">
+                    <span class="experience-date">Feb 2026</span>
+                    <h3>The Flow State</h3>
+                </div>
+                <div class="experience-content">
+                    <ul class="bullet-list">
+                        <li>Built an experimental focus tool replacing traditional timers with generative visuals and sound to support sustained attention and deep-work habits.</li>
+                        <li>Engineered a <b>linear temporal density algorithm</b> that converts elapsed time into progressive spatial complexity.</li>
+                    </ul>
+                </div>
+                <div class="tag-container">
+                    <span class="tag">p5.js</span><span class="tag">Web Audio API</span><span class="tag">HCI</span><span class="tag">Neuro-computing</span><span class="tag">Frontend</span><span class="tag">UX/UI</span>
+                </div>
+            </div>
+        
+            </div>
+
+        </div>
     </div>
 
     <script>
+        const grid = document.getElementById('master-grid');
+        const urlParams = new URLSearchParams(window.location.search);
+        const tagFilter = urlParams.get('tag');
+        const msgDiv = document.getElementById('active-filter-msg');
+        const title = document.getElementById('archive-title');
+        
         fetch('cards.json')
-            .then(res => res.json())
-            .then(data => {
-                const grid = document.getElementById('archive-grid');
-
-                // Combine experience and project cards
-                const combinedCards = [...data.experienceCards, ...data.projectCards];
-
-                combinedCards.forEach(card => {
-                    const bulletItems = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
-                    const tags = card.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-                    const typeBadge = card.type ? card.type : (card.company ? 'Experience' : 'Project');
-
-                    const cardHTML = `
-                        <div class="archive-card" data-tags="${card.dataTags || card.tags.join(' ')}">
-                            <span class="type-badge">${typeBadge}</span>
-                            <div class="archive-header">
-                                ${card.date ? `<span class="date">${card.date}</span>` : ''}
-                                <h3>${card.title}</h3>
-                                ${card.company ? `<span class="sub-header">${card.company}</span>` : ''}
-                                ${card.location ? `<span class="sub-header">${card.location}</span>` : ''}
-                            </div>
-                            <div class="archive-content">
-                                <ul class="bullet-list">${bulletItems}</ul>
-                            </div>
-                            <div class="tag-container">${tags}</div>
-                        </div>
-                    `;
-                    grid.insertAdjacentHTML('beforeend', cardHTML);
-                });
-
-                // Apply tag filter if present
-                applyTagFilter();
+          .then(res => res.json())
+          .then(data => {
+            // Combine experience and project cards
+            const allCards = [...data.experienceCards, ...(data.projectCards || [])];
+        
+            // Insert all cards into the grid
+            allCards.forEach(card => {
+              const bullets = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
+              const tagsHTML = card.tags.map(t => `<span class="tag">${t}</span>`).join('');
+              const typeBadge = card.type === 'experience' ? 'Experience' : 'Project';
+        
+              const cardHTML = `
+                <div class="archive-card" data-tags="${card.dataTags}">
+                  <span class="type-badge">${typeBadge}</span>
+                  <div class="experience-header">
+                    ${card.date ? `<span class="experience-date">${card.date}</span>` : ''}
+                    <h3>${card.title}</h3>
+                    ${card.company ? `<span class="company-name">${card.company}</span>` : ''}
+                    ${card.location ? `<span class="location">${card.location}</span>` : ''}
+                  </div>
+                  <div class="experience-content">
+                    <ul class="bullet-list">${bullets}</ul>
+                  </div>
+                  <div class="tag-container">${tagsHTML}</div>
+                </div>
+              `;
+              grid.insertAdjacentHTML('beforeend', cardHTML);
             });
-
-        function applyTagFilter() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const tagFilter = urlParams.get('tag');
-            const msgDiv = document.getElementById('active-filter-msg');
-            const title = document.getElementById('archive-title');
-            
+        
+            // Now all cards exist — select them
+            const cards = document.querySelectorAll('.archive-card');
+            cards.forEach(c => c.style.display = 'flex'); // show all by default
+        
+            // Apply filter if a tag is selected
             if (tagFilter) {
-                const cleanFilter = tagFilter.toLowerCase().trim();
-                const filterTerms = cleanFilter.split(/[\/\s]+/).filter(term => term.length > 0);
-                
-                title.innerText = `Expertise: ${tagFilter}`;
-                msgDiv.style.display = 'block';
-                msgDiv.innerHTML = `<i class="fas fa-filter"></i> Showing all Experience and Projects tagged with <b>${tagFilter}</b> • <a href="index.html" style="color: var(--accent); text-decoration: underline;">Back to Skills</a>`;
-            
-                document.querySelectorAll('.archive-card').forEach(card => {
-                    const cardTags = card.getAttribute('data-tags').toLowerCase().split(/\s+/);
-                    const isMatch = filterTerms.some(term => cardTags.includes(term));
-                    card.style.display = isMatch ? 'flex' : 'none';
-                });
-            } else {
-                document.querySelectorAll('.archive-card').forEach(card => card.style.display = 'flex');
+              // Update title and subtitle/message
+              title.innerText = `Expertise: ${tagFilter}`;
+              msgDiv.style.display = 'block';
+              msgDiv.innerHTML = `<i class="fas fa-filter"></i> Showing all Experience and Projects tagged with <b>${tagFilter}</b> • <a href="index.html" style="color: var(--accent); text-decoration: underline;">Back to Skills</a>`;
+        
+              // Split tag filter into terms (handles html/css -> ["html", "css"])
+              const filterTerms = tagFilter.toLowerCase().split(/[\/\s]+/).filter(t => t);
+        
+              cards.forEach(card => {
+                const cardTags = card.getAttribute('data-tags').toLowerCase().split(/\s+/);
+                // show card if any filter term matches any card tag
+                card.style.display = filterTerms.some(term => cardTags.includes(term)) ? 'flex' : 'none';
+              });
             }
-        }
-    </script>
+          });
+        </script>
 </body>
 </html>
