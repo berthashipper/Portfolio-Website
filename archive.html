@@ -100,6 +100,9 @@
         fetch('cards.json')
           .then(res => res.json())
           .then(data => {
+            // Clear the grid first to prevent duplicates
+            grid.innerHTML = '';
+        
             // Combine experience and project cards
             const allCards = [...data.experienceCards, ...(data.projectCards || [])];
         
@@ -127,25 +130,26 @@
               grid.insertAdjacentHTML('beforeend', cardHTML);
             });
         
-            // Now all cards exist — select them
+            // Select all cards AFTER insertion
             const cards = document.querySelectorAll('.archive-card');
-            cards.forEach(c => c.style.display = 'flex'); // show all by default
         
             // Apply filter if a tag is selected
             if (tagFilter) {
-              // Update title and subtitle/message
+              // Update title and message
               title.innerText = `Expertise: ${tagFilter}`;
               msgDiv.style.display = 'block';
               msgDiv.innerHTML = `<i class="fas fa-filter"></i> Showing all Experience and Projects tagged with <b>${tagFilter}</b> • <a href="index.html" style="color: var(--accent); text-decoration: underline;">Back to Skills</a>`;
         
-              // Split tag filter into terms (handles html/css -> ["html", "css"])
+              // Split tag filter into terms
               const filterTerms = tagFilter.toLowerCase().split(/[\/\s]+/).filter(t => t);
         
               cards.forEach(card => {
                 const cardTags = card.getAttribute('data-tags').toLowerCase().split(/\s+/);
-                // show card if any filter term matches any card tag
                 card.style.display = filterTerms.some(term => cardTags.includes(term)) ? 'flex' : 'none';
               });
+            } else {
+              // No filter — show all
+              cards.forEach(c => c.style.display = 'flex');
             }
           });
         </script>
