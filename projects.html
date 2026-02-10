@@ -112,44 +112,45 @@
 
     <script>
         fetch('cards.json')
-            .then(res => res.json())
-            .then(data => {
-                const grid = document.getElementById('project-grid');
-                ddata.projectCards.forEach(card => {
-    const bulletItems = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
-    const tags = card.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-    
-    const award = card.award ? `<div class="award-banner"><i class="fas fa-trophy"></i> ${card.award}</div>` : '';
-    
-    // Use 'context' if present, else 'problem'
-    const contextText = card.context || card.problem || '';
-    const context = contextText ? `<div class="context-box"><b>The Problem</b> ${contextText}</div>` : '';
-    
-    // Use 'text' for link titles
-    const links = (card.links || []).map(l => 
-        `<a href="${l.url}" target="_blank"><i class="${l.icon}"></i> ${l.text}</a>`
-    ).join('');
-    
-    const cardHTML = `
-        <div class="project-card" data-tags="${card.dataTags}">
-            ${award}
-            <div class="project-header">
-                <span class="project-date">${card.date}</span>
-                <h3>${card.title}</h3>
-            </div>
-            <div class="project-content">
-                ${context}
-                <ul class="bullet-list">${bulletItems}</ul>
-            </div>
-            <div class="tag-container">${tags}</div>
-            ${links ? `<div class="project-links">${links}</div>` : ''}
-        </div>
-    `;
-    grid.insertAdjacentHTML('beforeend', cardHTML);
-});
+    .then(res => res.json())
+    .then(data => {
+        const grid = document.getElementById('project-grid');
 
-                applyTagFilter();
-            });
+        data.projectCards.forEach(card => {
+            const bulletItems = (card.bulletPoints || []).map(bp => `<li>${bp}</li>`).join('');
+            const tags = (card.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('');
+
+            const award = card.award ? `<div class="award-banner"><i class="fas fa-trophy"></i> ${card.award}</div>` : '';
+
+            // Use problem if context doesn't exist
+            const contextText = card.context || card.problem || '';
+            const context = contextText ? `<div class="context-box"><b>The Problem</b> ${contextText}</div>` : '';
+
+            const links = (card.links || []).map(l => 
+                `<a href="${l.url}" target="_blank"><i class="${l.icon || ''}"></i> ${l.text || 'Link'}</a>`
+            ).join('');
+
+            const cardHTML = `
+                <div class="project-card" data-tags="${card.dataTags || ''}">
+                    ${award}
+                    <div class="project-header">
+                        <span class="project-date">${card.date || ''}</span>
+                        <h3>${card.title || 'Untitled Project'}</h3>
+                    </div>
+                    <div class="project-content">
+                        ${context}
+                        <ul class="bullet-list">${bulletItems}</ul>
+                    </div>
+                    <div class="tag-container">${tags}</div>
+                    ${links ? `<div class="project-links">${links}</div>` : ''}
+                </div>
+            `;
+            grid.insertAdjacentHTML('beforeend', cardHTML);
+        });
+
+        applyTagFilter();
+    })
+    .catch(err => console.error("Error loading project cards:", err));
 
         function applyTagFilter() {
             const urlParams = new URLSearchParams(window.location.search);
