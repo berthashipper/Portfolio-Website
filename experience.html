@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Bertha Shipper</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --bg-color: #fdfcfb; 
+            --text-main: #2d3436; 
+            --text-light: #636e72; 
+            --accent: #8e2132; 
+            --soft-accent: #f8ecee; 
+            --card-bg: #ffffff; 
+            --border: #edf2f4; 
+            --nav-height: 80px; 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+
+        nav { height: var(--nav-height); padding: 0 10%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; left: 0; background: rgba(253, 252, 251, 0.95); backdrop-filter: blur(10px); z-index: 2000; border-bottom: 1px solid var(--border); }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--accent); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .active-nav { color: var(--accent) !important; font-weight: 700 !important; }
+
+        .container { padding: calc(var(--nav-height) + 4rem) 5% 6rem; max-width: 1400px; margin: 0 auto; }
+        h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -2px; padding: 0 2.5%; }
+        .subtitle { color: var(--text-light); font-size: 1.1rem; margin-bottom: 3rem; font-weight: 300; padding: 0 2.5%; max-width: 900px; }
+
+        .experience-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+            gap: 2rem; 
+            padding: 0 2.5%;
+        }
+
+        .experience-card { 
+            background: #fff; 
+            border: 1px solid var(--border); 
+            padding: 2.5rem; 
+            border-radius: 20px; 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .experience-header h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25rem; line-height: 1.2; }
+        .company-name { font-size: 1rem; font-weight: 600; color: var(--text-main); display: block; }
+        .location { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.5rem; display: block; }
+        .experience-date { font-size: 0.8rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 1.5rem; display: block; }
+
+        .experience-content { flex-grow: 1; }
+        
+        .bullet-list { list-style: none; margin-bottom: 1.5rem; }
+        .bullet-list li { position: relative; padding-left: 1.2rem; margin-bottom: 0.6rem; color: var(--text-light); font-size: 0.9rem; line-height: 1.5; }
+        .bullet-list li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+
+        .tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+        .tag { background: var(--soft-accent); color: var(--accent); padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700; }
+
+        .filter-status { display: none; margin: 0 2.5% 2rem; font-weight: 600; color: var(--accent); font-size: 0.9rem; }
+        .faded { opacity: 0.25; filter: grayscale(1); pointer-events: none; }
+        .highlighted { border-color: var(--accent); box-shadow: 0 15px 40px rgba(142, 33, 50, 0.06); }
+
+        @media (max-width: 768px) {
+            .experience-grid { grid-template-columns: 1fr; }
+            .container { padding-top: calc(var(--nav-height) + 2rem); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">B.SHIPPER</a>
+        <div class="nav-links">
+            <a href="experience.html" class="active-nav">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="mailto:berthashipper@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Professional Experience</h1>
+        <p class="subtitle">A trajectory focused on applying machine learning, data analytics, and software engineering to complex problems in finance, neuroscience, and student engagement.</p>
+        
+        <div id="active-filter-msg" class="filter-status"></div>
+
+        <div class="experience-grid" id="experience-grid"></div>
+    </div>
+
+    <script>
+        fetch('cards.json')
+            .then(res => res.json())
+            .then(data => {
+                const grid = document.getElementById('experience-grid');
+                data.experienceCards.forEach(card => {
+                    const bulletItems = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
+                    const tags = card.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+                    const cardHTML = `
+                        <div class="experience-card" data-tags="${card.dataTags}">
+                            <div class="experience-header">
+                                <span class="experience-date">${card.date}</span>
+                                <h3>${card.title}</h3>
+                                <span class="company-name">${card.company}</span>
+                                <span class="location">${card.location}</span>
+                            </div>
+                            <div class="experience-content">
+                                <ul class="bullet-list">${bulletItems}</ul>
+                            </div>
+                            <div class="tag-container">${tags}</div>
+                        </div>
+                    `;
+                    grid.insertAdjacentHTML('beforeend', cardHTML);
+                });
+
+                // Apply filter if present in URL
+                applyTagFilter();
+            });
+
+        function applyTagFilter() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tagFilter = urlParams.get('tag');
+            const msgDiv = document.getElementById('active-filter-msg');
+            
+            if (tagFilter) {
+                const cleanFilter = tagFilter.toLowerCase().trim();
+                const filterTerms = cleanFilter.split(/[\/\s]+/).filter(term => term.length > 0);
+                
+                msgDiv.style.display = 'block';
+                msgDiv.innerHTML = `<i class="fas fa-filter"></i> Filtered by: <b>${tagFilter}</b> • <a href="${window.location.pathname}" style="color: var(--accent); text-decoration: underline; font-size: 0.8rem;">Show All</a>`;
+            
+                document.querySelectorAll('.experience-card').forEach(card => {
+                    const cardTags = card.getAttribute('data-tags').toLowerCase().split(/\s+/);
+                    const isMatch = filterTerms.some(term => cardTags.includes(term));
+        
+                    if (isMatch) {
+                        card.classList.add('highlighted');
+                        card.classList.remove('faded');
+                    } else {
+                        card.classList.add('faded');
+                        card.classList.remove('highlighted');
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

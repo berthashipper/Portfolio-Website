@@ -1,0 +1,217 @@
+{
+    "experienceCards": [
+      {
+        "id": "experience-1",
+        "type": "experience",
+        "dataTags": "ml nlp python ai java software",
+        "date": "Dec 2025 – Present",
+        "title": "Incoming AI/ML Digital Technology Intern",
+        "company": "Guardian Life",
+        "location": "New York, NY • On-site",
+        "bulletPoints": [
+          "Developing GenAI applications and digital assistants to streamline internal workflows.",
+          "Researching NLP and LLM technologies for application in global financial services and insurance."
+        ],
+        "tags": ["AI/ML", "LLM", "NLP", "Python", "Java", "Software"]
+      },
+      {
+        "id": "experience-2",
+        "type": "experience",
+        "dataTags": "javascript web development html css algorithm design product development frontend ux/ui collaboration leadership project management",
+        "date": "Oct 2023 – Present",
+        "title": "Product Developer | Treasurer | Co-Founder",
+        "company": "VC Ping Pong Club",
+        "location": "Poughkeepsie, NY • On-site",
+        "bulletPoints": [
+          "Spearheaded technical innovation by developing a custom web-based Tournament Manager, automating logistics and reducing administrative burden by 80%.",
+          "Enabled dynamic match generation, real-time roster management, and leaderboard tracking for 50+ participants.",
+          "Manage financial operations and fund allocation, driving a 141% increase in club participation since inception."
+        ],
+        "tags": ["JavaScript", "Web Development", "HTML", "CSS", "Algorithm Design", "Product Development", "Frontend", "UX/UI", "Collaboration", "Leadership", "Project Management"]
+      },
+      {
+        "id": "experience-3",
+        "type": "experience",
+        "dataTags": "python ml hpc regression analysis multimodal data data science neuroscience",
+        "date": "Jun – Aug 2025",
+        "title": "Applied Machine Learning Research Intern",
+        "company": "UChicago Data Science Institute",
+        "location": "Chicago, IL • On-site",
+        "bulletPoints": [
+          "Designed a multimodal ML pipeline to predict fMRI responses integrating video, audio, and language features.",
+          "Ranked 27th of 200+ teams in the 2025 Algonauts Challenge, an international brain activity prediction competition.",
+          "Optimized voxelwise encoding models with regularized regression and experimented with temporal context windows.",
+          "Processed high-dimensional features on high-performance computing clusters."
+        ],
+        "tags": ["Python", "ML", "HPC", "Regression Analysis", "Multimodal Data", "Data Science", "Neuroscience"]
+      },
+      {
+        "id": "experience-4",
+        "type": "experience",
+        "dataTags": "scientific writing editing neuroscience communication collaboration research translation",
+        "date": "Sep 2024 – Present",
+        "title": "Lay Review Editor",
+        "company": "Grey Matters Journal at Vassar College",
+        "location": "Poughkeepsie, NY • On-site",
+        "bulletPoints": [
+          "Transform complex neuroscience research into accessible articles for a broad audience.",
+          "Collaborate with interdisciplinary teams of authors and artists to optimize clarity and revision workflows.",
+          "Manage the editing lifecycle for published pieces including 'Only Love Can Hurt Like This' and 'The Brain Tsunami'."
+        ],
+        "tags": ["Scientific Writing", "Editing", "Neuroscience", "Communication", "Collaboration", "Research Translation"]
+      },
+      {
+        "id": "experience-5",
+        "type": "experience",
+        "dataTags": "community engagement leadership program management communication mentorship event planning",
+        "date": "Aug 2024 – May 2025",
+        "title": "Community Fellow | Office of Residential Life",
+        "company": "Vassar College",
+        "location": "Poughkeepsie, NY • On-site",
+        "bulletPoints": [
+          "Execute house-centered programming to foster student engagement and a cohesive inclusive environment.",
+          "Advise peers one-on-one, connecting them with academic and social resources.",
+          "Manage programming budgets and optimize fund allocation for institutional efficiency."
+        ],
+        "tags": ["Community Engagement", "Leadership", "Program Management", "Communication", "Mentorship", "Event Planning"]
+      },
+      {
+        "id": "experience-6",
+        "type": "experience",
+        "dataTags": "r data analysis visualization ggplot2 tidyr dplyr clustering sentiment analysis statistics",
+        "date": "Aug – Sep 2024",
+        "title": "Data Analysis & Consumer Insights Intern",
+        "company": "Beats by Dre",
+        "location": "Remote",
+        "bulletPoints": [
+          "Analyzed consumer data using R, uncovering preferences to optimize Gen Z-focused marketing strategies.",
+          "Developed visually engaging visualizations using ggplot2 and tidyr to present complex trends.",
+          "Performed rigorous data cleaning and preparation leveraging dplyr for streamlined manipulation."
+        ],
+        "tags": ["R", "Data Analysis", "Visualization", "ggplot2", "tidyr", "dplyr", "Clustering", "Sentiment Analysis", "Statistics"]
+      }
+    ],
+    "projectCards": [
+      {
+        "id": "project-1",
+        "type": "project",
+        "dataTags": "p5.js web audio api hci neuro-computing frontend ux/ui javascript cognitive modeling interactive design",
+        "date": "Feb 2026",
+        "title": "The Flow State",
+        "award": false,
+        "bulletPoints": [
+          "Built an experimental focus tool replacing traditional timers with generative visuals and sound to support sustained attention and deep-work habits.",
+          "Engineered a <b>linear temporal density algorithm</b> that converts elapsed time into progressive spatial complexity, informed by predictive processing models.",
+          "Built a dual-oscillator <b>Web Audio engine</b> modulating binaural beat frequencies along a controlled arousal curve aligned with the Yerkes–Dodson law.",
+          "Designed a peripheral-awareness UI using translucency and motion to offload temporal monitoring to peripheral vision, reducing central executive load."
+        ],
+        "tags": ["p5.js", "Web Audio API", "HCI", "Neuro-computing", "Frontend", "UX/UI", "JavaScript", "Cognitive Modeling", "Interactive Design"],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/berthashipper/The-Flow-State",
+            "icon": "fab fa-github"
+          },
+          {
+            "text": "Live Website",
+            "url": "#",
+            "icon": "fas fa-external-link-alt"
+          }
+        ]
+      },
+      {
+        "id": "project-2",
+        "type": "project",
+        "dataTags": "python pytorch ml hpc fmri neuroimaging regression analysis nlp cnn transformers multimodal data",
+        "date": "Jun – Aug 2025",
+        "title": "Predicting Neural Responses to Multimodal Stimuli",
+        "award": false,
+        "problem": "The Problem: Understanding how the brain responds to naturalistic stimuli (movies/TV) by linking fMRI activity to audiovisual and linguistic inputs.",
+        "bulletPoints": [
+          "Developed a multimodal ML pipeline in Python using <b>PyTorch, scikit-learn, and nilearn</b> to predict voxelwise neural responses.",
+          "Extracted features using CNNs (AlexNet), transformers (HuBERT), and NLP embeddings (RoBERTa).",
+          "Ranked <b>27th out of 200+ international teams</b> in the 2025 Algonauts Challenge.",
+          "Optimized ridge regression models through dimensionality reduction (PCA) and hyperparameter tuning on HPC clusters."
+        ],
+        "tags": ["Python", "PyTorch", "ML", "HPC", "fMRI", "Neuroimaging", "Regression Analysis", "NLP", "CNN", "Transformers", "Multimodal Data"],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/berthashipper",
+            "icon": "fab fa-github"
+          }
+        ]
+      },
+      {
+        "id": "project-3",
+        "type": "project",
+        "dataTags": "javascript html css web development frontend product development ux/ui algorithms",
+        "date": "Apr 2025",
+        "title": "Ping Pong Tournament Management System",
+        "award": false,
+        "problem": "The Problem: Outdated, manual systems were unable to handle match generation and score tracking for 50+ player club tournaments.",
+        "bulletPoints": [
+          "Designed a web application using <b>HTML, CSS, and JavaScript</b> to automate player registration and matchup generation.",
+          "Reduced manual administrative efforts by <b>80%</b>, streamlining event flow for large-scale college club events.",
+          "Implemented real-time score tracking and persistent <b>localStorage</b> for data consistency across sessions."
+        ],
+        "tags": ["JavaScript", "HTML", "CSS", "Web Development", "Frontend", "Product Development", "UX/UI", "Algorithms"],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/berthashipper/ping-pong-tournament-website",
+            "icon": "fab fa-github"
+          },
+          {
+            "text": "Live Website",
+            "url": "#",
+            "icon": "fas fa-external-link-alt"
+          }
+        ]
+      },
+      {
+        "id": "project-4",
+        "type": "project",
+        "dataTags": "java android sdk mvc architecture product design mobile app development algorithms ux/ui software engineering",
+        "date": "Sep – Dec 2024",
+        "title": "Pantry Pal: Kitchen Application",
+        "award": "People's Choice Award @ NYCWiC 2025",
+        "bulletPoints": [
+          "Built a kitchen assistant app in <b>Java on Android</b> using MVC architecture to simplify pantry management and grocery planning.",
+          "Engineered a <b>smart recipe suggestion algorithm</b> that cross-references pantry items to reduce food waste.",
+          "Implemented dynamic pantry tracking, personalized recipe suggestions, and dietary tag filtering for allergy safety.",
+          "Presented at the New York Celebration of Women in Computing (NYCWiC) 2025."
+        ],
+        "tags": ["Java", "Android SDK", "MVC Architecture", "Product Design", "Mobile App Development", "Algorithms", "UX/UI", "Software Engineering"],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/berthashipper/Pantry-Pal-Android-Application",
+            "icon": "fab fa-github"
+          }
+        ]
+      },
+      {
+        "id": "project-5",
+        "type": "project",
+        "dataTags": "r ggplot2 tidyr data analysis clustering sentiment analysis statistics visualization consumer insights",
+        "date": "Aug – Oct 2024",
+        "title": "Beats Consumer Insights Analysis",
+        "award": false,
+        "bulletPoints": [
+          "Applied <b>K-means clustering</b> in R to segment customers by demographics, usage behavior, and feature preferences.",
+          "Extracted and processed customer feedback through <b>sentiment analysis</b> to identify trends in speaker quality satisfaction.",
+          "Delivered data-driven recommendations through 14 clear visualizations using <b>ggplot2 and tidyr</b>.",
+          "Optimized models for accurate results on large customer datasets of wireless speaker preferences."
+        ],
+        "tags": ["R", "ggplot2", "tidyr", "Data Analysis", "Clustering", "Sentiment Analysis", "Statistics", "Visualization", "Consumer Insights"],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/berthashipper/Beats-Wireless-Speakers-Consumer-Insights-Analysis",
+            "icon": "fab fa-github"
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bertha Shipper | CS + Math</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdfcfb;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --accent: #8e2132; 
+            --soft-accent: #f8ecee;
+            --card-bg: #ffffff;
+            --border: #edf2f4;
+            --nav-height: 80px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+
+        nav {
+            height: var(--nav-height); padding: 0 10%; display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 100%; top: 0; left: 0; background: rgba(253, 252, 251, 0.95);
+            backdrop-filter: blur(12px); z-index: 2000; border-bottom: 1px solid var(--border);
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--accent); text-decoration: none; }
+        
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .hero { padding: calc(var(--nav-height) + 6rem) 10% 4rem; max-width: 1100px; }
+        .hero h1 { font-size: 4rem; margin-bottom: 1.5rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; }
+        .hero p { font-size: 1.4rem; color: var(--text-light); margin-bottom: 2rem; max-width: 800px; font-weight: 300; }
+        .badge { background: var(--soft-accent); color: var(--accent); padding: 0.6rem 1.2rem; border-radius: 30px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .about-container { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; padding: 4rem 10%; background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .about-image { width: 100%; border-radius: 24px; aspect-ratio: 4/5; object-fit: cover; background: var(--soft-accent); border: 1px solid var(--border); }
+        .about-text h2 { margin-bottom: 1.5rem; }
+        .about-text p { color: var(--text-light); margin-bottom: 1.5rem; font-size: 1.05rem; }
+
+        section { padding: 6rem 10%; }
+        h2 { font-size: 1.8rem; margin-bottom: 3rem; font-weight: 800; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem; }
+        .skill-group h4 { font-size: 0.8rem; text-transform: uppercase; color: var(--accent); letter-spacing: 1px; margin-bottom: 1.5rem; }
+        
+        /* Enhanced Skill Pills */
+        .skill-pill { 
+            display: inline-block; background: #fff; border: 1.5px solid var(--border); 
+            padding: 0.7rem 1.4rem; border-radius: 12px; font-size: 0.95rem; font-weight: 600; 
+            margin: 0 0.6rem 0.6rem 0; cursor: pointer; transition: 0.3s; text-decoration: none; color: var(--text-main);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .skill-pill:hover { 
+            border-color: var(--accent); 
+            background: var(--soft-accent);
+            color: var(--accent); 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 20px rgba(142, 33, 50, 0.12); 
+        }
+
+        footer { padding: 6rem 10% 3rem; background: #fff; border-top: 1px solid var(--border); text-align: center; }
+        .social-links a { font-size: 1.5rem; margin-right: 1.5rem; color: var(--text-light); transition: 0.3s; }
+        .social-links a:hover { color: var(--accent); }
+
+        @media (max-width: 968px) {
+            .about-container { grid-template-columns: 1fr; gap: 2rem; }
+            .about-image { max-width: 400px; margin: 0 auto; }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            nav { padding: 0 5%; }
+            section, .about-container { padding: 4rem 5%; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">B.SHIPPER</a>
+        <div class="nav-links">
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="mailto:berthashipper@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <span class="badge">Vassar College • Computer Science & Applied Math</span>
+        <h1>Building data-driven solutions that turn complex information into actionable intelligence.</h1>
+        <p>Incoming AI/ML Intern at Guardian Life. Researcher. Full-Stack Developer.</p>
+        <div class="social-links">
+            <a href="https://github.com/berthashipper"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/bertha-shipper"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </header>
+
+    <div class="about-container">
+        <img src="headshot.jpg" alt="Bertha Shipper" class="about-image">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I am a motivated Computer Science student with a passion for using AI, machine learning, and data-driven technology to solve real-world problems. With strong technical skills in machine learning, data analysis, and software development, I specialize in transforming complex and multimodal datasets into actionable insights and building scalable, user-centered applications that automate and enhance decision-making.</p>
+            <p>My experience spans both industry and research. I conducted consumer insights analysis at Beats, applying advanced statistical techniques in R to uncover trends and inform Gen Z–focused marketing strategies. I also completed a summer research internship at the University of Chicago Data Science Institute, where I built an end-to-end machine learning pipeline to model and predict neural responses to multimodal movie stimuli; our team ranked 27th out of 200+ worldwide in the 2025 Algonauts Challenge.</p>
+            <p>This past semester, I studied abroad in Stockholm, taking coursework in data analytics & visualization, and exploring how companies approach analytics, visualization, and product development in an international context. I am excited to continue leveraging my technical expertise, analytical mindset, and creativity to contribute to innovative projects.</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4>Foundational</h4>
+                <a href="archive.html?tag=python" class="skill-pill">Python</a>
+                <a href="archive.html?tag=java" class="skill-pill">Java</a>
+                <a href="archive.html?tag=r" class="skill-pill">R</a>
+                <a href="archive.html?tag=javascript" class="skill-pill">JavaScript</a>
+                <a href="archive.html?tag=html/css" class="skill-pill">HTML/CSS</a>
+            </div>
+            <div class="skill-group">
+                <h4>AI & Research</h4>
+                <a href="archive.html?tag=ml" class="skill-pill">Machine Learning</a>
+                <a href="archive.html?tag=pytorch" class="skill-pill">PyTorch</a>
+                <a href="archive.html?tag=neuroscience" class="skill-pill">Neuroscience</a>
+                <a href="archive.html?tag=multimodal" class="skill-pill">Multimodal Data</a>
+            </div>
+            <div class="skill-group">
+                <h4>Engineering</h4>
+                <a href="archive.html?tag=web development" class="skill-pill">Web Development</a>
+                <a href="archive.html?tag=product development" class="skill-pill">Product Development</a>
+                <a href="archive.html?tag=ux/ui" class="skill-pill">UX/UI Design</a>
+                <a href="archive.html?tag=algorithms" class="skill-pill">Algorithms</a>
+                <a href="archive.html?tag=hpc" class="skill-pill">HPC / Clusters</a>
+            </div>
+            <div class="skill-group">
+                <h4>Analysis & Strategy</h4>
+                <a href="archive.html?tag=data analysis" class="skill-pill">Data Analysis</a>
+                <a href="archive.html?tag=visualization" class="skill-pill">Visualization</a>
+                <a href="archive.html?tag=statistics" class="skill-pill">Statistics</a>
+                <a href="archive.html?tag=communication" class="skill-pill">Communication</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Bertha Shipper • New York City</p>
+    </footer>
+</body>
+</html>
