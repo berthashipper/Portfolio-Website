@@ -88,8 +88,9 @@
         <div class="archive-grid" id="master-grid">
             <!-- Cards will be loaded dynamically from cards.json -->
         </div>
-        
-        <script>
+    </div>
+
+    <script>
         const grid = document.getElementById('master-grid');
         const urlParams = new URLSearchParams(window.location.search);
         const tagFilter = urlParams.get('tag');
@@ -99,59 +100,72 @@
         fetch('cards.json')
           .then(res => res.json())
           .then(data => {
+            // Clear the grid first to prevent duplicates
             grid.innerHTML = '';
         
             // Combine experience and project cards
             const allCards = [...data.experienceCards, ...(data.projectCards || [])];
         
+            // Insert all cards into the grid
             allCards.forEach(card => {
-                const bullets = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
-                const tagsHTML = card.tags.map(t => `<span class="tag">${t}</span>`).join('');
-                const typeBadge = card.type === 'experience' ? 'Experience' : 'Project';
+  const bullets = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
+  const tagsHTML = card.tags.map(t => `<span class="tag">${t}</span>`).join('');
+  const typeBadge = card.type === 'experience' ? 'Experience' : 'Project';
+
+  // Render links if they exist
+  let linksHTML = '';
+  if (card.links && card.links.length) {
+    linksHTML = `<div class="link-container">` +
+      card.links.map(link => 
+        `<a href="${link.url}" target="_blank" style="margin-right:0.5rem;text-decoration:none;color:var(--accent)">
+           <i class="${link.icon}"></i> ${link.text}
+         </a>`
+      ).join('') +
+      `</div>`;
+  }
+
+  const cardHTML = `
+    <div class="archive-card" data-tags="${card.dataTags}">
+      <span class="type-badge">${typeBadge}</span>
+      <div class="experience-header">
+        ${card.date ? `<span class="experience-date">${card.date}</span>` : ''}
+        <h3>${card.title}</h3>
+        ${card.company ? `<span class="company-name">${card.company}</span>` : ''}
+        ${card.location ? `<span class="location">${card.location}</span>` : ''}
+      </div>
+      <div class="experience-content">
+        <ul class="bullet-list">${bullets}</ul>
+      </div>
+      <div class="tag-container">${tagsHTML}</div>
+      ${linksHTML} 
+    </div>
+  `;
+
+  grid.insertAdjacentHTML('beforeend', cardHTML);
+});
         
-                // Render links using the same UI as project page
-                const linksHTML = (card.links || []).length ? 
-                    `<div class="project-links">` +
-                    card.links.map(link => 
-                        `<a href="${link.url}" target="_blank"><i class="${link.icon}"></i> ${link.text}</a>`
-                    ).join('') +
-                    `</div>` : '';
+            // Select all cards AFTER insertion
+            const cards = document.querySelectorAll('.archive-card');
         
-                const cardHTML = `
-                <div class="project-card" data-tags="${card.dataTags}">
-                    <span class="type-badge">${typeBadge}</span>
-                    <div class="project-header">
-                        ${card.date ? `<span class="project-date">${card.date}</span>` : ''}
-                        <h3>${card.title}</h3>
-                        ${card.company ? `<span class="company-name">${card.company}</span>` : ''}
-                        ${card.location ? `<span class="location">${card.location}</span>` : ''}
-                    </div>
-                    <div class="project-content">
-                        <ul class="bullet-list">${bullets}</ul>
-                    </div>
-                    <div class="tag-container">${tagsHTML}</div>
-                    ${linksHTML}
-                </div>
-                `;
-                grid.insertAdjacentHTML('beforeend', cardHTML);
-            });
-        
-            // Apply tag filter if present
-            const cards = document.querySelectorAll('.project-card');
+            // Apply filter if a tag is selected
             if (tagFilter) {
-                title.innerText = `Expertise: ${tagFilter}`;
-                msgDiv.style.display = 'block';
-                msgDiv.innerHTML = `<i class="fas fa-filter"></i> Showing all Experience and Projects tagged with <b>${tagFilter}</b> • <a href="index.html" style="color: var(--accent); text-decoration: underline;">Back to Skills</a>`;
-                
-                const filterTerms = tagFilter.toLowerCase().split(/[\/\s]+/).filter(t => t);
-                cards.forEach(card => {
-                    const cardTags = card.getAttribute('data-tags').toLowerCase().split(/\s+/);
-                    card.style.display = filterTerms.some(term => cardTags.includes(term)) ? 'flex' : 'none';
-                });
+              // Update title and message
+              title.innerText = `Expertise: ${tagFilter}`;
+              msgDiv.style.display = 'block';
+              msgDiv.innerHTML = `<i class="fas fa-filter"></i> Showing all Experience and Projects tagged with <b>${tagFilter}</b> • <a href="index.html" style="color: var(--accent); text-decoration: underline;">Back to Skills</a>`;
+        
+              // Split tag filter into terms
+              const filterTerms = tagFilter.toLowerCase().split(/[\/\s]+/).filter(t => t);
+        
+              cards.forEach(card => {
+                const cardTags = card.getAttribute('data-tags').toLowerCase().split(/\s+/);
+                card.style.display = filterTerms.some(term => cardTags.includes(term)) ? 'flex' : 'none';
+              });
             } else {
-                cards.forEach(c => c.style.display = 'flex');
+              // No filter — show all
+              cards.forEach(c => c.style.display = 'flex');
             }
-        });
+          });
         </script>
 </body>
 </html>
