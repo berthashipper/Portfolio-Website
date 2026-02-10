@@ -99,24 +99,36 @@
             .then(data => {
                 const grid = document.getElementById('experience-grid');
                 data.experienceCards.forEach(card => {
-                    const bulletItems = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
-                    const tags = card.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-                    const cardHTML = `
-                        <div class="experience-card" data-tags="${card.dataTags}">
-                            <div class="experience-header">
-                                <span class="experience-date">${card.date}</span>
-                                <h3>${card.title}</h3>
-                                <span class="company-name">${card.company}</span>
-                                <span class="location">${card.location}</span>
-                            </div>
-                            <div class="experience-content">
-                                <ul class="bullet-list">${bulletItems}</ul>
-                            </div>
-                            <div class="tag-container">${tags}</div>
-                        </div>
-                    `;
-                    grid.insertAdjacentHTML('beforeend', cardHTML);
-                });
+    const bulletItems = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
+    const tags = card.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+
+    // Render links if they exist
+    let linksHTML = '';
+    if (card.links && card.links.length) {
+        linksHTML = `<div class="project-links">` +
+            card.links.map(l => 
+                `<a href="${l.url}" target="_blank"><i class="${l.icon}"></i> ${l.text}</a>`
+            ).join('') +
+            `</div>`;
+    }
+
+    const cardHTML = `
+        <div class="experience-card" data-tags="${card.dataTags}">
+            <div class="experience-header">
+                <span class="experience-date">${card.date}</span>
+                <h3>${card.title}</h3>
+                <span class="company-name">${card.company}</span>
+                <span class="location">${card.location}</span>
+            </div>
+            <div class="experience-content">
+                <ul class="bullet-list">${bulletItems}</ul>
+            </div>
+            <div class="tag-container">${tags}</div>
+            ${linksHTML}
+        </div>
+    `;
+    grid.insertAdjacentHTML('beforeend', cardHTML);
+});
 
                 // Apply filter if present in URL
                 applyTagFilter();

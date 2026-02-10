@@ -108,27 +108,41 @@
         
             // Insert all cards into the grid
             allCards.forEach(card => {
-              const bullets = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
-              const tagsHTML = card.tags.map(t => `<span class="tag">${t}</span>`).join('');
-              const typeBadge = card.type === 'experience' ? 'Experience' : 'Project';
-        
-              const cardHTML = `
-                <div class="archive-card" data-tags="${card.dataTags}">
-                  <span class="type-badge">${typeBadge}</span>
-                  <div class="experience-header">
-                    ${card.date ? `<span class="experience-date">${card.date}</span>` : ''}
-                    <h3>${card.title}</h3>
-                    ${card.company ? `<span class="company-name">${card.company}</span>` : ''}
-                    ${card.location ? `<span class="location">${card.location}</span>` : ''}
-                  </div>
-                  <div class="experience-content">
-                    <ul class="bullet-list">${bullets}</ul>
-                  </div>
-                  <div class="tag-container">${tagsHTML}</div>
-                </div>
-              `;
-              grid.insertAdjacentHTML('beforeend', cardHTML);
-            });
+  const bullets = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
+  const tagsHTML = card.tags.map(t => `<span class="tag">${t}</span>`).join('');
+  const typeBadge = card.type === 'experience' ? 'Experience' : 'Project';
+
+  // Render links if they exist
+  let linksHTML = '';
+  if (card.links && card.links.length) {
+    linksHTML = `<div class="link-container">` +
+      card.links.map(link => 
+        `<a href="${link.url}" target="_blank" style="margin-right:0.5rem;text-decoration:none;color:var(--accent)">
+           <i class="${link.icon}"></i> ${link.text}
+         </a>`
+      ).join('') +
+      `</div>`;
+  }
+
+  const cardHTML = `
+    <div class="archive-card" data-tags="${card.dataTags}">
+      <span class="type-badge">${typeBadge}</span>
+      <div class="experience-header">
+        ${card.date ? `<span class="experience-date">${card.date}</span>` : ''}
+        <h3>${card.title}</h3>
+        ${card.company ? `<span class="company-name">${card.company}</span>` : ''}
+        ${card.location ? `<span class="location">${card.location}</span>` : ''}
+      </div>
+      <div class="experience-content">
+        <ul class="bullet-list">${bullets}</ul>
+      </div>
+      <div class="tag-container">${tagsHTML}</div>
+      ${linksHTML} 
+    </div>
+  `;
+
+  grid.insertAdjacentHTML('beforeend', cardHTML);
+});
         
             // Select all cards AFTER insertion
             const cards = document.querySelectorAll('.archive-card');
