@@ -111,7 +111,7 @@
     </div>
 
     <script>
-        fetch('cards.json')
+        fetch('cards.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
         const grid = document.getElementById('project-grid');

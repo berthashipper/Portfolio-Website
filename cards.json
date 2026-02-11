@@ -19,7 +19,7 @@
         "type": "experience",
         "dataTags": "javascript web development html css algorithm design product development frontend ux/ui collaboration leadership project management",
         "date": "Oct 2023 – Present",
-        "title": "Product Developer | Treasurer | Co-Founder",
+        "title": "Product Developer, Treasurer, Co-Founder",
         "company": "VC Ping Pong Club",
         "location": "Poughkeepsie, NY • On-site",
         "bulletPoints": [
@@ -85,7 +85,7 @@
         "tags": ["Scientific Writing", "Editing", "Neuroscience", "Communication", "Collaboration", "Research Translation"],
         "links": [
           {
-            "text": "Only Love Can Hurt Like This",
+            "text": "Only Love Can\n Hurt Like This",
             "url": "https://www.greymattersjournalvc.org/issue-10-articles/blog-post-title-four-9cshz",
             "icon": "fas fa-external-link-alt"
           },
@@ -106,8 +106,8 @@
         "type": "experience",
         "dataTags": "community engagement leadership program management communication mentorship event planning",
         "date": "Aug 2024 – May 2025",
-        "title": "Community Fellow | Office of Residential Life",
-        "company": "Vassar College",
+        "title": "Community Fellow",
+        "company": "Vassar College Office of Residential Life",
         "location": "Poughkeepsie, NY • On-site",
         "bulletPoints": [
           "Execute house-centered programming to foster student engagement and a cohesive inclusive environment.",

@@ -120,7 +120,7 @@
         const msgDiv = document.getElementById('active-filter-msg');
         const title = document.getElementById('archive-title');
         
-        fetch('cards.json')
+        fetch('cards.json?v=' + Date.now())
           .then(res => res.json())
           .then(data => {
             // Clear the grid first to prevent duplicates
