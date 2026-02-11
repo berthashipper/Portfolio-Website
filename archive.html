@@ -140,7 +140,7 @@ let linksHTML = '';
 if (card.links && card.links.length) {
     linksHTML = `<div class="project-links">` +
         card.links.map(link =>
-            `<a href="${link.url}" target="_blank"><i class="${link.icon}"></i> ${link.text}</a>`
+            `<a href="${link.url}" target="_blank" rel="noopener noreferrer"><i class="${link.icon}"></i> ${link.text}</a>`
         ).join('') +
     `</div>`;
 }
