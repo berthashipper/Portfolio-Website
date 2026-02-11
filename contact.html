@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Bertha Shipper</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdfcfb;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --accent: #8e2132; 
+            --soft-accent: #f8ecee;
+            --card-bg: #ffffff;
+            --border: #edf2f4;
+            --nav-height: 80px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.4; overflow: hidden; }
+
+        nav {
+            height: var(--nav-height); padding: 0 10%; display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 100%; top: 0; left: 0; background: rgba(253, 252, 251, 0.95);
+            backdrop-filter: blur(12px); z-index: 2000; border-bottom: 1px solid var(--border);
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--accent); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .active-nav { color: var(--accent) !important; font-weight: 700 !important; }
+
+        .contact-container { 
+            padding: calc(var(--nav-height) + 2rem) 5% 2rem; 
+            max-width: 1300px; 
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        .contact-header h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 1rem; line-height: 1.1; }
+        .contact-header p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; max-width: 700px; }
+
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, auto); 
+            gap: 1.5rem; 
+            justify-content: start; 
+        }
+
+        .contact-card {
+            background: #fff;
+            padding: 1.2rem 1.8rem; 
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+            min-width: fit-content;
+            color: inherit;
+        }
+
+        /* Hover animation only for interactive <a> cards */
+        a.contact-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        a.contact-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px rgba(142, 33, 50, 0.06);
+        }
+
+        .contact-card span { 
+            color: var(--text-light); 
+            font-size: 0.85rem; 
+            white-space: nowrap; 
+        }
+
+        .contact-card i { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.2rem; }
+        .contact-card h3 { font-size: 1rem; font-weight: 800; color: var(--text-main); }
+
+        @media (max-width: 1024px) {
+            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+            body { overflow: auto; }
+        }
+
+        @media (max-width: 600px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .contact-header h1 { font-size: 2.2rem; }
+            .contact-container { padding-top: calc(var(--nav-height) + 1rem); }
+            .contact-card { min-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">B.SHIPPER</a>
+        <div class="nav-links">
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active-nav">Contact</a>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Let's build something intelligent.</h1>
+            <p>Open to discussing new projects, research collaborations, or technical opportunities in AI and Data Science.</p>
+        </div>
+
+        <div class="contact-grid">
+            <a href="mailto:berthashipper@gmail.com" class="contact-card">
+                <i class="far fa-envelope"></i>
+                <h3>Email</h3>
+                <span>berthashipper@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/bertha-shipper" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <i class="fab fa-linkedin-in"></i>
+                <h3>LinkedIn</h3>
+                <span>in/bertha-shipper</span>
+            </a>
+            <a href="https://github.com/berthashipper" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <span>github.com/berthashipper</span>
+            </a>
+            <div class="contact-card">
+                <i class="fas fa-location-dot"></i>
+                <h3>Location</h3>
+                <span>NYC • Poughkeepsie</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
