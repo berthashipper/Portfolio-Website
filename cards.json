@@ -80,22 +80,22 @@
         "bulletPoints": [
           "Transform complex neuroscience research into accessible articles for a broad audience.",
           "Collaborate with interdisciplinary teams of authors and artists to optimize clarity and revision workflows.",
-          "Manage the editing lifecycle for published pieces including 'Only Love Can Hurt Like This' and 'The Brain Tsunami'."
+          "Manage the editing lifecycle for published pieces over multiple Issues."
         ],
         "tags": ["Scientific Writing", "Editing", "Neuroscience", "Communication", "Collaboration", "Research Translation"],
         "links": [
           {
-            "text": "Only Love Can\n Hurt Like This",
+            "text": "Broken Heart Syndrome",
             "url": "https://www.greymattersjournalvc.org/issue-10-articles/blog-post-title-four-9cshz",
             "icon": "fas fa-external-link-alt"
           },
           {
-            "text": "The Future of Thought",
+            "text": "Brain Computer Interfaces",
             "url": "https://www.greymattersjournalvc.org/issue-10-articles/kxcrtm9iicsmwhbmt7awkal3a7576e",
             "icon": "fas fa-external-link-alt"
           },
           {
-            "text": "The Brain Tsunami",
+            "text": "Migraine Aura",
             "url": "https://www.greymattersjournalvc.org/issue-9-articles/migraine-aura",
             "icon": "fas fa-external-link-alt"
           }
