@@ -131,35 +131,50 @@
         
             // Insert all cards into the grid
             allCards.forEach(card => {
-  const bullets = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
-  const tagsHTML = card.tags.map(t => `<span class="tag">${t}</span>`).join('');
-  const typeBadge = card.type === 'experience' ? 'Experience' : 'Project';
+                const bullets = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
+const tagsHTML = card.tags.map(t => `<span class="tag">${t}</span>`).join('');
+const typeBadge = card.type === 'experience' ? 'Experience' : 'Project';
+
+// Render optional project problem
+const problemHTML = card.problem
+  ? `<p class="project-problem">${card.problem}</p>`
+  : '';
 
 // Render links
 let linksHTML = '';
 if (card.links && card.links.length) {
-    linksHTML = `<div class="project-links">` +
-        card.links.map(link =>
-            `<a href="${link.url}" target="_blank" rel="noopener noreferrer"><i class="${link.icon}"></i> ${link.text}</a>`
-        ).join('') +
-    `</div>`;
+  linksHTML = `<div class="project-links">` +
+    card.links.map(link =>
+      `<a href="${link.url}" target="_blank" rel="noopener noreferrer"><i class="${link.icon}"></i> ${link.text}</a>`
+    ).join('') +
+  `</div>`;
 }
 
-  const cardHTML = `
-  <div class="archive-card" data-tags="${card.dataTags}">
-    <span class="type-badge">${typeBadge}</span>
-    <div class="experience-header">
-      ${card.date ? `<span class="experience-date">${card.date}</span>` : ''}
-      <h3>${card.title}</h3>
-      ${card.company ? `<span class="company-name">${card.company}</span>` : ''}
-      ${card.location ? `<span class="location">${card.location}</span>` : ''}
-    </div>
-    <div class="experience-content">
-      <ul class="bullet-list">${bullets}</ul>
-    </div>
-    <div class="tag-container">${tagsHTML}</div>
-    ${linksHTML} 
+const searchableText = [
+  card.dataTags || '',
+  card.problem || '',
+  card.bulletPoints.join(' ')
+].join(' ').toLowerCase();
+
+const cardHTML = `
+<div class="archive-card" data-tags="${searchableText}">
+  <span class="type-badge">${typeBadge}</span>
+  <div class="experience-header">
+    ${card.date ? `<span class="experience-date">${card.date}</span>` : ''}
+    <h3>${card.title}</h3>
+    ${card.company ? `<span class="company-name">${card.company}</span>` : ''}
+    ${card.location ? `<span class="location">${card.location}</span>` : ''}
   </div>
+
+  ${problemHTML}
+
+  <div class="experience-content">
+    <ul class="bullet-list">${bullets}</ul>
+  </div>
+
+  <div class="tag-container">${tagsHTML}</div>
+  ${linksHTML}
+</div>
 `;
 
   grid.insertAdjacentHTML('beforeend', cardHTML);
