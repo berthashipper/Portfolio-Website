@@ -27,7 +27,19 @@
           "Enabled dynamic match generation, real-time roster management, and leaderboard tracking for 50+ participants.",
           "Manage financial operations and fund allocation, driving a 141% increase in club participation since inception."
         ],
-        "tags": ["JavaScript", "Web Development", "HTML", "CSS", "Algorithm Design", "Product Development", "Frontend", "UX/UI", "Collaboration", "Leadership", "Project Management"]
+        "tags": ["JavaScript", "Web Development", "HTML", "CSS", "Algorithm Design", "Product Development", "Frontend", "UX/UI", "Collaboration", "Leadership", "Project Management"],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/berthashipper/ping-pong-tournament-website",
+            "icon": "fab fa-github"
+          },
+          {
+            "text": "Live Website",
+            "url": "https://berthashipper.github.io/ping-pong-tournament-website/",
+            "icon": "fas fa-external-link-alt"
+          }
+        ]
       },
       {
         "id": "experience-3",
@@ -43,7 +55,19 @@
           "Optimized voxelwise encoding models with regularized regression and experimented with temporal context windows.",
           "Processed high-dimensional features on high-performance computing clusters."
         ],
-        "tags": ["Python", "ML", "HPC", "Regression Analysis", "Multimodal Data", "Data Science", "Neuroscience"]
+        "tags": ["Python", "ML", "HPC", "Regression Analysis", "Multimodal Data", "Data Science", "Neuroscience"],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/berthashipper/algonauts-dsi",
+            "icon": "fab fa-github"
+          },
+          {
+            "text": "Research Poster",
+            "url": "Research Symposium Poster.pdf",
+            "icon": "fas fa-file-pdf"
+          }
+        ]
       },
       {
         "id": "experience-4",
@@ -58,7 +82,24 @@
           "Collaborate with interdisciplinary teams of authors and artists to optimize clarity and revision workflows.",
           "Manage the editing lifecycle for published pieces including 'Only Love Can Hurt Like This' and 'The Brain Tsunami'."
         ],
-        "tags": ["Scientific Writing", "Editing", "Neuroscience", "Communication", "Collaboration", "Research Translation"]
+        "tags": ["Scientific Writing", "Editing", "Neuroscience", "Communication", "Collaboration", "Research Translation"],
+        "links": [
+          {
+            "text": "Only Love Can Hurt Like This",
+            "url": "https://greymattersjournal.org/only-love-can-hurt-like-this",
+            "icon": "fas fa-external-link-alt"
+          },
+          {
+            "text": "The Future of Thought",
+            "url": "https://greymattersjournal.org/the-future-of-thought",
+            "icon": "fas fa-external-link-alt"
+          },
+          {
+            "text": "The Brain Tsunami",
+            "url": "https://greymattersjournal.org/the-brain-tsunami",
+            "icon": "fas fa-external-link-alt"
+          }
+        ]
       },
       {
         "id": "experience-5",
@@ -88,7 +129,19 @@
           "Developed visually engaging visualizations using ggplot2 and tidyr to present complex trends.",
           "Performed rigorous data cleaning and preparation leveraging dplyr for streamlined manipulation."
         ],
-        "tags": ["R", "Data Analysis", "Visualization", "ggplot2", "tidyr", "dplyr", "Clustering", "Sentiment Analysis", "Statistics"]
+        "tags": ["R", "Data Analysis", "Visualization", "ggplot2", "tidyr", "dplyr", "Clustering", "Sentiment Analysis", "Statistics"],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/berthashipper/Beats-Wireless-Speakers-Consumer-Insights-Analysis",
+            "icon": "fab fa-github"
+          },
+          {
+            "text": "Presentation",
+            "url": "https://docs.google.com/presentation/d/1B9-0Gu73untffnhuCud3iJIvJORuFpiWAh5XocaMoGQ/edit?usp=sharing",
+            "icon": "fas fa-external-link-alt"
+          }
+        ]
       }
     ],
     "projectCards": [
