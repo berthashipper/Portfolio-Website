@@ -159,33 +159,36 @@
       }
     ],
     "projectCards": [
-      {
-        "id": "project-1",
-        "type": "project",
-        "dataTags": "p5.js web audio api hci html neuro-computing frontend ux ui javascript cognitive modeling interactive design neuroscience",
-        "date": "Feb 2026",
-        "title": "The Flow State",
-        "award": false,
-        "bulletPoints": [
-          "Built an experimental focus tool replacing traditional timers with generative visuals and sound to support sustained attention and deep-work habits.",
-          "Engineered a <b>linear temporal density algorithm</b> that converts elapsed time into progressive spatial complexity, informed by predictive processing models.",
-          "Built a dual-oscillator <b>Web Audio engine</b> modulating binaural beat frequencies along a controlled arousal curve aligned with the Yerkes–Dodson law.",
-          "Designed a peripheral-awareness UI using translucency and motion to offload temporal monitoring to peripheral vision, reducing central executive load."
-        ],
-        "tags": ["p5.js", "Web Audio API", "HCI", "Neuro-computing", "Frontend", "UX/UI", "JavaScript", "Cognitive Modeling", "Interactive Design"],
-        "links": [
-          {
-            "text": "GitHub",
-            "url": "https://github.com/berthashipper/The-Flow-State",
-            "icon": "fab fa-github"
+        {
+            "id": "project-1",
+            "type": "project",
+            "dataTags": "p5.js web audio api hci html neuro-computing frontend ux ui javascript cognitive modeling interactive design neuroscience",
+            "date": "Feb 2026",
+            "title": "The Flow State",
+            "award": false,
+            "problem": "The Problem: Traditional productivity timers interrupt focus with intrusive alerts and numerical countdowns, forcing users to monitor time directly instead of remaining immersed in deep work.",
+            "bulletPoints": [
+              "Designed a generative biofeedback environment exploring how <b>cognitive science and neuro-aesthetics</b> can sustain deep work without explicit time tracking.",
+              "Implemented a <b>linear node-injection algorithm</b> that converts elapsed time into progressive visual density, encoding duration spatially instead of numerically.",
+              "Built multiple rendering modules (radial, fractal, rectilinear, glitch) that act as <b>cognitive context primes</b>, allowing users to match visual structure to task type.",
+              "Engineered a dual-oscillator <b>Web Audio binaural engine</b> that increases beat frequency along a controlled arousal curve aligned with the Yerkes–Dodson performance model.",
+              "Created a peripheral-awareness UI using translucency, blur, and motion to shift temporal monitoring to peripheral vision and reduce central executive load.",
+              "Integrated micro-reactive cursor physics that establishes ambient sensorimotor feedback, reinforcing engagement without gamification."
+            ],
+            "tags": ["p5.js", "Web Audio API", "HCI", "Neuro-computing", "Frontend", "UX/UI", "JavaScript", "Cognitive Modeling", "Interactive Design"],
+            "links": [
+              {
+                "text": "GitHub",
+                "url": "https://github.com/berthashipper/The-Flow-State",
+                "icon": "fab fa-github"
+              },
+              {
+                "text": "Live Website",
+                "url": "https://berthashipper.github.io/The-Flow-State/",
+                "icon": "fas fa-external-link-alt"
+              }
+            ]
           },
-          {
-            "text": "Live Website",
-            "url": "https://berthashipper.github.io/The-Flow-State/",
-            "icon": "fas fa-external-link-alt"
-          }
-        ]
-      },
       {
         "id": "project-2",
         "type": "project",
@@ -236,18 +239,21 @@
           }
         ]
       },
-      {
+      {{
         "id": "project-4",
         "type": "project",
         "dataTags": "java android sdk mvc architecture product design mobile app development algorithms ux ui software engineering",
         "date": "Sep – Dec 2024",
         "title": "Pantry Pal: Kitchen Application",
         "award": "People's Choice Award @ NYCWiC 2025",
+        "problem": "The Problem: Modern kitchens lack intelligent tools to track ingredients, manage dietary restrictions, and reduce food waste, forcing users to rely on fragmented notes, memory, and manual grocery planning.",
         "bulletPoints": [
-          "Built a kitchen assistant app in <b>Java on Android</b> using MVC architecture to simplify pantry management and grocery planning.",
-          "Engineered a <b>smart recipe suggestion algorithm</b> that cross-references pantry items to reduce food waste.",
-          "Implemented dynamic pantry tracking, personalized recipe suggestions, and dietary tag filtering for allergy safety.",
-          "Presented at the New York Celebration of Women in Computing (NYCWiC) 2025."
+          "Built a full-featured kitchen assistant app in <b>Java on Android</b> using <b>MVC architecture</b> to unify pantry tracking, recipe discovery, and grocery planning in a single system.",
+          "Engineered a <b>smart recipe matching algorithm</b> that cross-references pantry inventory with scalable recipes to minimize waste and support allergy-safe cooking.",
+          "Implemented dynamic pantry state management, personalized recipe suggestions, and dietary tag filtering for accessibility and health-conscious users.",
+          "Designed seamless grocery list integration that prevents duplicate purchases and synchronizes ingredient usage across pantry and cookbook modules.",
+          "Developed persistent local storage and a clean interactive UI to ensure reliability, scalability, and intuitive everyday use.",
+          "Presented the project at <b>NYCWiC 2025</b>, earning the <b>People’s Choice Award</b> for real-world usability and user-centered design."
         ],
         "tags": ["Java", "Android SDK", "MVC Architecture", "Product Design", "Mobile App Development", "Algorithms", "UX/UI", "Software Engineering"],
         "links": [
