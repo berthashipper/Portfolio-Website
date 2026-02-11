@@ -166,7 +166,7 @@
             "date": "Feb 2026",
             "title": "The Flow State",
             "award": false,
-            "problem": "The Problem: Traditional productivity timers interrupt focus with intrusive alerts and numerical countdowns, forcing users to monitor time directly instead of remaining immersed in deep work.",
+            "problem": "Traditional productivity timers interrupt focus with intrusive alerts and numerical countdowns, forcing users to monitor time directly instead of remaining immersed in deep work.",
             "bulletPoints": [
               "Designed a generative biofeedback environment exploring how <b>cognitive science and neuro-aesthetics</b> can sustain deep work without explicit time tracking.",
               "Implemented a <b>linear node-injection algorithm</b> that converts elapsed time into progressive visual density, encoding duration spatially instead of numerically.",
@@ -189,56 +189,62 @@
               }
             ]
           },
-      {
-        "id": "project-2",
-        "type": "project",
-        "dataTags": "python pytorch ml hpc fmri neuroimaging regression analysis nlp cnn transformers multimodal data",
-        "date": "Jun – Aug 2025",
-        "title": "Predicting Neural Responses to Multimodal Stimuli",
-        "award": false,
-        "problem": "The Problem: Understanding how the brain responds to naturalistic stimuli (movies/TV) by linking fMRI activity to audiovisual and linguistic inputs.",
-        "bulletPoints": [
-          "Developed a multimodal ML pipeline in Python using <b>PyTorch, scikit-learn, and nilearn</b> to predict voxelwise neural responses.",
-          "Extracted features using CNNs (AlexNet), transformers (HuBERT), and NLP embeddings (RoBERTa).",
-          "Ranked <b>27th out of 200+ international teams</b> in the 2025 Algonauts Challenge.",
-          "Optimized ridge regression models through dimensionality reduction (PCA) and hyperparameter tuning on HPC clusters."
-        ],
-        "tags": ["Python", "PyTorch", "ML", "HPC", "fMRI", "Neuroimaging", "Regression Analysis", "NLP", "CNN", "Transformers", "Multimodal Data"],
-        "links": [
           {
-            "text": "GitHub",
-            "url": "https://github.com/berthashipper/algonauts-dsi.git",
-            "icon": "fab fa-github"
-          }
-        ]
-      },
-      {
-        "id": "project-3",
-        "type": "project",
-        "dataTags": "javascript html css web development frontend product development ux ui algorithms",
-        "date": "Apr 2025",
-        "title": "Ping Pong Tournament Management System",
-        "award": false,
-        "problem": "The Problem: Outdated, manual systems were unable to handle match generation and score tracking for 50+ player club tournaments.",
-        "bulletPoints": [
-          "Designed a web application using <b>HTML, CSS, and JavaScript</b> to automate player registration and matchup generation.",
-          "Reduced manual administrative efforts by <b>80%</b>, streamlining event flow for large-scale college club events.",
-          "Implemented real-time score tracking and persistent <b>localStorage</b> for data consistency across sessions."
-        ],
-        "tags": ["JavaScript", "HTML", "CSS", "Web Development", "Frontend", "Product Development", "UX/UI", "Algorithms"],
-        "links": [
-          {
-            "text": "GitHub",
-            "url": "https://github.com/berthashipper/ping-pong-tournament-website",
-            "icon": "fab fa-github"
+            "id": "project-2",
+            "type": "project",
+            "dataTags": "python pytorch ml hpc fmri neuroimaging regression analysis nlp cnn transformers multimodal data",
+            "date": "Jun – Aug 2025",
+            "title": "Predicting Neural Responses to Multimodal Stimuli",
+            "award": false,
+            "problem": "Predicting voxel-level brain activity during natural movie viewing requires integrating high-dimensional audiovisual and language features into models that generalize across unseen stimuli.",
+            "bulletPoints": [
+              "Built a large-scale <b>multimodal encoding pipeline</b> in Python using PyTorch and nilearn to predict voxelwise fMRI responses to naturalistic movie stimuli.",
+              "Extracted synchronized features from video, audio, and language using <b>CNNs, transformers, and speech models</b>, aligning temporal context across modalities.",
+              "Reduced feature dimensionality with PCA and regularized ridge regression to stabilize training on extremely high-dimensional neural data.",
+              "Deployed experiments on <b>HPC clusters with Slurm scheduling</b>, running large hyperparameter sweeps and cross-validated model comparisons.",
+              "Integrated longer temporal context windows for language embeddings, improving generalization on held-out clips.",
+              "Ranked <b>27th out of 200+ international teams</b> in the 2025 Algonauts Challenge for brain-response prediction."
+            ],
+            "tags": ["Python", "PyTorch", "ML", "HPC", "fMRI", "Neuroimaging", "Regression Analysis", "NLP", "CNN", "Transformers", "Multimodal Data"],
+            "links": [
+              {
+                "text": "GitHub",
+                "url": "https://github.com/berthashipper/algonauts-dsi.git",
+                "icon": "fab fa-github"
+              }
+            ]
           },
           {
-            "text": "Live Website",
-            "url": "https://berthashipper.github.io/ping-pong-tournament-website/",
-            "icon": "fas fa-external-link-alt"
-          }
-        ]
-      },
+            "id": "project-3",
+            "type": "project",
+            "dataTags": "javascript html css web development frontend product development ux ui algorithms",
+            "date": "Apr 2025",
+            "title": "Ping Pong Tournament Management System",
+            "award": false,
+            "problem": "Manual tournament coordination for my club failed at scale — generating fair matchups, tracking scores, and managing 50+ players in real time created bottlenecks and human error.",
+            "bulletPoints": [
+              "Engineered a scalable tournament management web app using <b>HTML, CSS, and JavaScript</b> to automate registration, matchmaking, and live score tracking.",
+              "Designed a <b>fair-round matchup algorithm</b> that dynamically assigns opponents each round while handling odd player counts without duplication.",
+              "Built real-time player and score management interfaces enabling seamless updates during live tournaments.",
+              "Implemented persistent state architecture with <b>localStorage</b>, storing players, rounds, and results without requiring a backend server.",
+              "Rebuilt and modernized an earlier Python prototype into a production-ready browser application optimized for usability.",
+              "Reduced organizer workload by <b>80%</b> and enabled smooth operation of large multi-round club tournaments.",
+              "Designed a responsive UI supporting both desktop and mobile coordination for on-site event management."
+            ],
+            "tags": ["JavaScript", "HTML", "CSS", "Web Development", "Frontend", "Product Development", "UX/UI", "Algorithms"],
+            "links": [
+              {
+                "text": "GitHub",
+                "url": "https://github.com/berthashipper/ping-pong-tournament-website",
+                "icon": "fab fa-github"
+              },
+              {
+                "text": "Live Website",
+                "url": "https://berthashipper.github.io/ping-pong-tournament-website/",
+                "icon": "fas fa-external-link-alt"
+              }
+            ]
+          },
       {
         "id": "project-4",
         "type": "project",
@@ -246,7 +252,7 @@
         "date": "Sep – Dec 2024",
         "title": "Pantry Pal: Kitchen Application",
         "award": "People's Choice Award @ NYCWiC 2025",
-        "problem": "The Problem: Modern kitchens lack intelligent tools to track ingredients, manage dietary restrictions, and reduce food waste, forcing users to rely on fragmented notes, memory, and manual grocery planning.",
+        "problem": "Modern kitchens lack intelligent tools to track ingredients, manage dietary restrictions, and reduce food waste, forcing users to rely on fragmented notes, memory, and manual grocery planning.",
         "bulletPoints": [
           "Built a full-featured kitchen assistant app in <b>Java on Android</b> using <b>MVC architecture</b> to unify pantry tracking, recipe discovery, and grocery planning in a single system.",
           "Engineered a <b>smart recipe matching algorithm</b> that cross-references pantry inventory with scalable recipes to minimize waste and support allergy-safe cooking.",
