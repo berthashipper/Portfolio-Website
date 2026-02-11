@@ -106,6 +106,50 @@
         @media (max-width: 768px) {
             .archive-grid { grid-template-columns: 1fr; }
         }
+        @media (max-width: 768px) {
+    nav {
+        padding: 0 5%;
+        height: auto; /* Allows nav to grow if links wrap */
+        min-height: var(--nav-height);
+        flex-wrap: wrap; /* The magic property to prevent smushing */
+        justify-content: center; /* Centers items on mobile */
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .logo {
+        margin-right: auto; /* Keeps logo left on larger mobile tablets */
+    }
+
+    .nav-links {
+        gap: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    /* Adjust Hero/Container spacing for the potentially taller nav */
+    .hero, .container, .contact-container {
+        padding-top: calc(var(--nav-height) + 2rem);
+    }
+}
+
+/* Extra tight fix for small phones (iPhone SE, etc) */
+@media (max-width: 400px) {
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.2rem;
+    }
+}
     </style>
 </head>
 <body>

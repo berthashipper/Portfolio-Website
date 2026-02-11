@@ -190,8 +190,25 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
-            nav { padding: 0 5%; }
+            nav { 
+        padding: 0 5%; 
+    }
+
+    .nav-links { 
+        gap: 1rem; /* Reduced from 2rem */
+    }
+
+    .nav-links a { 
+        font-size: 0.8rem; /* Slightly smaller text */
+    }
+
+    /* If it's still tight on tiny phones (iPhone SE size) */
+    @media (max-width: 380px) {
+        .logo { font-size: 1rem; }
+        .nav-links { gap: 0.7rem; }
+    }
             section, .about-container { padding: 4rem 5%; }
+            
         }
     </style>
 </head>
