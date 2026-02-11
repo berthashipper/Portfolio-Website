@@ -32,6 +32,29 @@
         h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -2px; padding: 0 2.5%; }
         .subtitle { color: var(--text-light); font-size: 1.1rem; margin-bottom: 3rem; font-weight: 300; padding: 0 2.5%; max-width: 900px; }
 
+        .project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.2rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.project-links a:hover {
+    color: var(--accent);
+}
+
         .experience-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
@@ -104,13 +127,13 @@
 
     // Render links if they exist
     let linksHTML = '';
-    if (card.links && card.links.length) {
-        linksHTML = `<div class="project-links">` +
-            card.links.map(l => 
-                `<a href="${l.url}" target="_blank"><i class="${l.icon}"></i> ${l.text}</a>`
-            ).join('') +
-            `</div>`;
-    }
+if (card.links && card.links.length) {
+    linksHTML = card.links.map(l =>
+        `<a href="${l.url}" target="_blank">
+            <i class="${l.icon}"></i> ${l.text}
+        </a>`
+    ).join('');
+}
 
     const cardHTML = `
         <div class="experience-card" data-tags="${card.dataTags}">
@@ -124,6 +147,7 @@
                 <ul class="bullet-list">${bulletItems}</ul>
             </div>
             <div class="tag-container">${tags}</div>
+${linksHTML ? `<div class="project-links">${linksHTML}</div>` : ''}
             ${linksHTML}
         </div>
     `;
