@@ -19,26 +19,43 @@
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
-
-        nav { height: var(--nav-height); padding: 0 10%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; left: 0; background: rgba(253, 252, 251, 0.95); backdrop-filter: blur(10px); z-index: 2000; border-bottom: 1px solid var(--border); }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        
+        /* Nav Bar */
+        nav {
+            height: var(--nav-height);
+            padding: 0 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(253, 252, 251, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 2000;
+            border-bottom: 1px solid var(--border);
+        }
         .logo { font-weight: 800; font-size: 1.2rem; color: var(--accent); text-decoration: none; }
         .nav-links { display: flex; gap: 2rem; }
         .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--accent); }
         .active-nav { color: var(--accent) !important; font-weight: 700 !important; }
-
+        
+        /* Container & Header */
         .container { padding: calc(var(--nav-height) + 4rem) 5% 6rem; max-width: 1400px; margin: 0 auto; }
         h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -2px; padding: 0 2.5%; }
         .subtitle { color: var(--text-light); font-size: 1.1rem; margin-bottom: 3rem; font-weight: 300; padding: 0 2.5%; max-width: 900px; }
-
+        
+        /* Experience Grid */
         .experience-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
             gap: 2rem; 
             padding: 0 2.5%;
         }
-
+        
         .experience-card { 
             background: #fff; 
             border: 1px solid var(--border); 
@@ -49,94 +66,52 @@
             flex-direction: column;
             height: 100%;
         }
-
+        
         .experience-header h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25rem; line-height: 1.2; }
         .company-name { font-size: 1rem; font-weight: 600; color: var(--text-main); display: block; }
         .location { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.5rem; display: block; }
         .experience-date { font-size: 0.8rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 1.5rem; display: block; }
-
-        .experience-content { flex-grow: 1; }
         
+        .experience-content { flex-grow: 1; }
         .bullet-list { list-style: none; margin-bottom: 1.5rem; }
         .bullet-list li { position: relative; padding-left: 1.2rem; margin-bottom: 0.6rem; color: var(--text-light); font-size: 0.9rem; line-height: 1.5; }
         .bullet-list li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
-
+        
         .tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border); }
         .tag { background: var(--soft-accent); color: var(--accent); padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700; }
-
-        /* Unified Link Styling */
-        .project-links { 
-            margin-top: 1.5rem; 
-            display: flex; 
-            gap: 1.2rem; 
-            border-top: 1px solid var(--border); 
-            padding-top: 1.2rem; 
-        }
-        .project-links a { 
-            text-decoration: none; 
-            color: var(--text-main); 
-            font-weight: 700; 
-            font-size: 0.85rem; 
-            transition: 0.2s; 
-            display: flex; 
-            align-items: center; 
-            gap: 0.4rem; 
-        }
+        
+        .project-links { margin-top: 1.5rem; display: flex; gap: 1.2rem; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+        .project-links a { text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 0.85rem; transition: 0.2s; display: flex; align-items: center; gap: 0.4rem; }
         .project-links a:hover { color: var(--accent); }
-
+        
         .filter-status { display: none; margin: 0 2.5% 2rem; font-weight: 600; color: var(--accent); font-size: 0.9rem; }
         .faded { opacity: 0.25; filter: grayscale(1); pointer-events: none; }
         .highlighted { border-color: var(--accent); box-shadow: 0 15px 40px rgba(142, 33, 50, 0.06); }
-
+        
+        /* Mobile Nav Adjustments */
         @media (max-width: 768px) {
-            .experience-grid { grid-template-columns: 1fr; }
+            nav {
+                padding: 0 5%;
+                height: auto;
+                min-height: var(--nav-height);
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+            .logo { margin-right: auto; }
+            .nav-links { gap: 1.2rem; }
+            .nav-links a { font-size: 0.85rem; }
             .container { padding-top: calc(var(--nav-height) + 2rem); }
         }
-        @media (max-width: 768px) {
-    nav {
-        padding: 0 5%;
-        height: auto; /* Allows nav to grow if links wrap */
-        min-height: var(--nav-height);
-        flex-wrap: wrap; /* The magic property to prevent smushing */
-        justify-content: center; /* Centers items on mobile */
-        gap: 0.5rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-
-    .logo {
-        margin-right: auto; /* Keeps logo left on larger mobile tablets */
-    }
-
-    .nav-links {
-        gap: 1.2rem;
-    }
-
-    .nav-links a {
-        font-size: 0.85rem;
-    }
-
-    /* Adjust Hero/Container spacing for the potentially taller nav */
-    .hero, .container, .contact-container {
-        padding-top: calc(var(--nav-height) + 2rem);
-    }
-}
-
-/* Extra tight fix for small phones (iPhone SE, etc) */
-@media (max-width: 400px) {
-    .logo {
-        width: 100%;
-        text-align: center;
-        margin-right: 0;
-    }
-    
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        margin-top: 0.2rem;
-    }
-}
-    </style>
+        
+        /* Extra tight fix for small phones */
+        @media (max-width: 400px) {
+            .logo { width: 100%; text-align: center; margin-right: 0; }
+            .nav-links { width: 100%; justify-content: center; margin-top: 0.2rem; }
+        }
+        </style>
 </head>
 <body>
     <nav>
