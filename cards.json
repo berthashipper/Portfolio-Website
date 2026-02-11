@@ -50,10 +50,10 @@
         "company": "UChicago Data Science Institute",
         "location": "Chicago, IL • On-site",
         "bulletPoints": [
-          "Designed a multimodal ML pipeline to predict fMRI responses integrating video, audio, and language features.",
-          "Ranked 27th of 200+ teams in the 2025 Algonauts Challenge, an international brain activity prediction competition.",
-          "Optimized voxelwise encoding models with regularized regression and experimented with temporal context windows.",
-          "Processed high-dimensional features on high-performance computing clusters."
+          "Conducted applied machine learning research in a neuroscience lab to model brain responses to naturalistic audiovisual stimuli.",
+          "Collaborated with researchers to design and evaluate multimodal prediction experiments using large-scale fMRI datasets.",
+          "Ranked 27th of 200+ international teams in the 2025 Algonauts Challenge for brain activity prediction.",
+          "Ran large experiment sweeps on high-performance computing clusters and presented findings at a research symposium."
         ],
         "tags": ["Python", "ML", "HPC", "Regression Analysis", "Multimodal Data", "Data Science", "Neuroscience"],
         "links": [
@@ -78,9 +78,9 @@
         "company": "Grey Matters Journal at Vassar College",
         "location": "Poughkeepsie, NY • On-site",
         "bulletPoints": [
-          "Transform complex neuroscience research into accessible articles for a broad audience.",
-          "Collaborate with interdisciplinary teams of authors and artists to optimize clarity and revision workflows.",
-          "Manage the editing lifecycle for published pieces over multiple Issues."
+          "Transform complex neuroscience research into clear, accessible articles for a broad audience, enhancing reader comprehension.",
+          "Collaborate with interdisciplinary teams of authors, scientific editors, and artists to streamline the revision process and optimize clarity.",
+          "Manage the editing lifecycle from initial drafts to final publication, consistently meeting deadlines and upholding quality standards."
         ],
         "tags": ["Scientific Writing", "Editing", "Neuroscience", "Communication", "Collaboration", "Research Translation"],
         "links": [
@@ -195,15 +195,14 @@
             "dataTags": "python pytorch ml hpc fmri neuroimaging regression analysis nlp cnn transformers multimodal data",
             "date": "Jun – Aug 2025",
             "title": "Predicting Neural Responses to Multimodal Stimuli",
-            "award": false,
+            "award": "27th/200+ teams in 2025 Algonauts Challenge",
             "problem": "Predicting voxel-level brain activity during natural movie viewing requires integrating high-dimensional audiovisual and language features into models that generalize across unseen stimuli.",
             "bulletPoints": [
-              "Built a large-scale <b>multimodal encoding pipeline</b> in Python using PyTorch and nilearn to predict voxelwise fMRI responses to naturalistic movie stimuli.",
-              "Extracted synchronized features from video, audio, and language using <b>CNNs, transformers, and speech models</b>, aligning temporal context across modalities.",
-              "Reduced feature dimensionality with PCA and regularized ridge regression to stabilize training on extremely high-dimensional neural data.",
-              "Deployed experiments on <b>HPC clusters with Slurm scheduling</b>, running large hyperparameter sweeps and cross-validated model comparisons.",
-              "Integrated longer temporal context windows for language embeddings, improving generalization on held-out clips.",
-              "Ranked <b>27th out of 200+ international teams</b> in the 2025 Algonauts Challenge for brain-response prediction."
+              "Built a multimodal encoding pipeline in Python using PyTorch and nilearn to predict voxelwise fMRI responses to naturalistic movie stimuli.",
+              "Extracted synchronized video, audio, and language features using CNNs (AlexNet), transformer models (HuBERT), and NLP embeddings (RoBERTa).",
+              "Applied modality-specific PCA and regularized ridge regression to stabilize training on extremely high-dimensional neural data.",
+              "Ran large-scale hyperparameter sweeps on HPC clusters with Slurm scheduling and cross-validated model performance.",
+              "Integrated longer temporal context windows to improve generalization on held-out stimuli."
             ],
             "tags": ["Python", "PyTorch", "ML", "HPC", "fMRI", "Neuroimaging", "Regression Analysis", "NLP", "CNN", "Transformers", "Multimodal Data"],
             "links": [
