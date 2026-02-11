@@ -32,29 +32,6 @@
         h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -2px; padding: 0 2.5%; }
         .subtitle { color: var(--text-light); font-size: 1.1rem; margin-bottom: 3rem; font-weight: 300; padding: 0 2.5%; max-width: 900px; }
 
-        .project-links {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1.2rem;
-    border-top: 1px solid var(--border);
-    padding-top: 1.2rem;
-}
-
-.project-links a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 700;
-    font-size: 0.85rem;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.project-links a:hover {
-    color: var(--accent);
-}
-
         .experience-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
@@ -87,6 +64,26 @@
         .tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border); }
         .tag { background: var(--soft-accent); color: var(--accent); padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700; }
 
+        /* Unified Link Styling */
+        .project-links { 
+            margin-top: 1.5rem; 
+            display: flex; 
+            gap: 1.2rem; 
+            border-top: 1px solid var(--border); 
+            padding-top: 1.2rem; 
+        }
+        .project-links a { 
+            text-decoration: none; 
+            color: var(--text-main); 
+            font-weight: 700; 
+            font-size: 0.85rem; 
+            transition: 0.2s; 
+            display: flex; 
+            align-items: center; 
+            gap: 0.4rem; 
+        }
+        .project-links a:hover { color: var(--accent); }
+
         .filter-status { display: none; margin: 0 2.5% 2rem; font-weight: 600; color: var(--accent); font-size: 0.9rem; }
         .faded { opacity: 0.25; filter: grayscale(1); pointer-events: none; }
         .highlighted { border-color: var(--accent); box-shadow: 0 15px 40px rgba(142, 33, 50, 0.06); }
@@ -112,7 +109,6 @@
         <p class="subtitle">A trajectory focused on applying machine learning, data analytics, and software engineering to complex problems in finance, neuroscience, and student engagement.</p>
         
         <div id="active-filter-msg" class="filter-status"></div>
-
         <div class="experience-grid" id="experience-grid"></div>
     </div>
 
@@ -122,39 +118,36 @@
             .then(data => {
                 const grid = document.getElementById('experience-grid');
                 data.experienceCards.forEach(card => {
-    const bulletItems = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
-    const tags = card.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+                    const bulletItems = card.bulletPoints.map(bp => `<li>${bp}</li>`).join('');
+                    const tags = card.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+                    
+                    let linksHTML = '';
+                    if (card.links && card.links.length) {
+                        linksHTML = `<div class="project-links">` + 
+                            card.links.map(l =>
+                                `<a href="${l.url}" target="_blank">
+                                    <i class="${l.icon}"></i> ${l.text}
+                                </a>`
+                            ).join('') + `</div>`;
+                    }
 
-    // Render links if they exist
-    let linksHTML = '';
-if (card.links && card.links.length) {
-    linksHTML = card.links.map(l =>
-        `<a href="${l.url}" target="_blank">
-            <i class="${l.icon}"></i> ${l.text}
-        </a>`
-    ).join('');
-}
-
-    const cardHTML = `
-        <div class="experience-card" data-tags="${card.dataTags}">
-            <div class="experience-header">
-                <span class="experience-date">${card.date}</span>
-                <h3>${card.title}</h3>
-                <span class="company-name">${card.company}</span>
-                <span class="location">${card.location}</span>
-            </div>
-            <div class="experience-content">
-                <ul class="bullet-list">${bulletItems}</ul>
-            </div>
-            <div class="tag-container">${tags}</div>
-${linksHTML ? `<div class="project-links">${linksHTML}</div>` : ''}
-            ${linksHTML}
-        </div>
-    `;
-    grid.insertAdjacentHTML('beforeend', cardHTML);
-});
-
-                // Apply filter if present in URL
+                    const cardHTML = `
+                        <div class="experience-card" data-tags="${card.dataTags}">
+                            <div class="experience-header">
+                                <span class="experience-date">${card.date}</span>
+                                <h3>${card.title}</h3>
+                                <span class="company-name">${card.company}</span>
+                                <span class="location">${card.location}</span>
+                            </div>
+                            <div class="experience-content">
+                                <ul class="bullet-list">${bulletItems}</ul>
+                            </div>
+                            <div class="tag-container">${tags}</div>
+                            ${linksHTML}
+                        </div>
+                    `;
+                    grid.insertAdjacentHTML('beforeend', cardHTML);
+                });
                 applyTagFilter();
             });
 
@@ -173,7 +166,6 @@ ${linksHTML ? `<div class="project-links">${linksHTML}</div>` : ''}
                 document.querySelectorAll('.experience-card').forEach(card => {
                     const cardTags = card.getAttribute('data-tags').toLowerCase().split(/\s+/);
                     const isMatch = filterTerms.some(term => cardTags.includes(term));
-        
                     if (isMatch) {
                         card.classList.add('highlighted');
                         card.classList.remove('faded');
