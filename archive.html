@@ -18,13 +18,21 @@
             --nav-height: 80px; 
         }
         
-        .project-problem {
+        .context-box {
+  background: var(--bg-color);
+  border-left: 3px solid var(--accent);
+  padding: 1rem;
+  margin: 1rem 0 1.5rem 0;
   font-size: 0.9rem;
-  color: var(--text-main);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  line-height: 1.4;
 }
+
+.context-box b {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}       
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
@@ -144,8 +152,9 @@ const tagsHTML = card.tags.map(t => `<span class="tag">${t}</span>`).join('');
 const typeBadge = card.type === 'experience' ? 'Experience' : 'Project';
 
 // Render optional project problem
-const problemHTML = card.problem
-  ? `<p class="project-problem">${card.problem}</p>`
+const contextText = card.context || card.problem || '';
+const problemHTML = contextText
+  ? `<div class="context-box"><b>The Problem</b> ${contextText}</div>`
   : '';
 
 // Render links
