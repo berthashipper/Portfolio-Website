@@ -86,17 +86,17 @@
         "links": [
           {
             "text": "Only Love Can Hurt Like This",
-            "url": "https://greymattersjournal.org/only-love-can-hurt-like-this",
+            "url": "https://www.greymattersjournalvc.org/issue-10-articles/blog-post-title-four-9cshz",
             "icon": "fas fa-external-link-alt"
           },
           {
             "text": "The Future of Thought",
-            "url": "https://greymattersjournal.org/the-future-of-thought",
+            "url": "https://www.greymattersjournalvc.org/issue-10-articles/kxcrtm9iicsmwhbmt7awkal3a7576e",
             "icon": "fas fa-external-link-alt"
           },
           {
             "text": "The Brain Tsunami",
-            "url": "https://greymattersjournal.org/the-brain-tsunami",
+            "url": "https://www.greymattersjournalvc.org/issue-9-articles/migraine-aura",
             "icon": "fas fa-external-link-alt"
           }
         ]
@@ -118,6 +118,20 @@
       },
       {
         "id": "experience-6",
+        "type": "experience",
+        "dataTags": "photography adobe creative suite branding visual storytelling media production",
+        "date": "Aug – Dec 2025",
+        "title": "Photographer",
+        "company": "DIS Study Abroad",
+        "location": "Stockholm, Sweden • On-site",
+        "bulletPoints": [
+          "Transformed a personal passion for photography into a professional role capturing authentic moments of student life, academics, and cultural immersion abroad.",
+          "Produced high-quality visual content featured across DIS websites, social media, and marketing campaigns, serving as both storyteller and ambassador for the study abroad experience."
+        ],
+        "tags": ["Photography", "Corporate Branding", "Adobe Creative Suite", "Visual Storytelling", "Media Production"]
+      },
+      {
+        "id": "experience-7",
         "type": "experience",
         "dataTags": "r data analysis visualization ggplot2 tidyr dplyr clustering sentiment analysis statistics",
         "date": "Aug – Sep 2024",
