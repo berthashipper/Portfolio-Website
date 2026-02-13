@@ -203,7 +203,7 @@
               "Applied modality-specific PCA and regularized ridge regression to stabilize training on extremely high-dimensional neural data.",
               "Ran large-scale hyperparameter sweeps on HPC clusters with Slurm scheduling and cross-validated model performance.",
               "Integrated longer temporal context windows to improve generalization on held-out stimuli.",
-              "<p>Conducted in the <a href=\"https://mcnlab.uchicago.edu/\" target=\"_blank\">Computational Affective and Neuroscience Lab</a> at UChicago under mentorship from <a href=\"https://psychology.uchicago.edu/directory/yuan-chang-leong\" target=\"_blank\">Yuan Chang Leong</a> and <a href=\"https://psychology.uchicago.edu/directory/Monica-Rosenberg\" target=\"_blank\">Monica Rosenberg</a>, in collaboration with Olivia Sopala.</p>"
+              "Conducted in the <a href=\"https://mcnlab.uchicago.edu/\" target=\"_blank\">Computational Affective and Neuroscience Lab</a> at UChicago under mentorship from <a href=\"https://psychology.uchicago.edu/directory/yuan-chang-leong\" target=\"_blank\">Yuan Chang Leong</a> and <a href=\"https://psychology.uchicago.edu/directory/Monica-Rosenberg\" target=\"_blank\">Monica Rosenberg</a>, in collaboration with Olivia Sopala."
             ],
             "tags": ["Python", "PyTorch", "ML", "HPC", "fMRI", "Neuroimaging", "Regression Analysis", "NLP", "CNN", "Transformers", "Multimodal Data"],
             "links": [
