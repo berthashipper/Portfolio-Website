@@ -77,6 +77,19 @@
     color: var(--accent);
 }
 
+.award-banner {
+  display: inline-block;
+  background: #fff9db;
+  color: #f08c00;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  align-self: flex-start;
+  border: 1px solid #ffe066;
+}
+
         /* Card Styles consistent with Experience/Projects */
         .archive-card { 
             background: #fff; 
@@ -217,9 +230,15 @@ const searchableText = [
   card.bulletPoints.join(' ')
 ].join(' ').toLowerCase();
 
+const awardHTML = card.award
+  ? `<div class="award-banner"><i class="fas fa-trophy"></i> ${card.award}</div>`
+  : '';
+
 const cardHTML = `
 <div class="archive-card" data-tags="${searchableText}">
   <span class="type-badge">${typeBadge}</span>
+  ${awardHTML}
+
   <div class="experience-header">
     ${card.date ? `<span class="experience-date">${card.date}</span>` : ''}
     <h3>${card.title}</h3>
