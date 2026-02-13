@@ -224,10 +224,12 @@ if (card.links && card.links.length) {
   `</div>`;
 }
 
+const stripHTML = str => str.replace(/<[^>]*>/g, '');
+
 const searchableText = [
-  card.dataTags || '',
-  card.problem || '',
-  card.bulletPoints.join(' ')
+  stripHTML(card.dataTags || ''),
+  stripHTML(card.problem || ''),
+  stripHTML(card.bulletPoints.join(' '))
 ].join(' ').toLowerCase();
 
 const awardHTML = card.award
