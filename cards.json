@@ -5,14 +5,16 @@
         "type": "experience",
         "dataTags": "ml nlp python ai java software",
         "date": "May – Aug 2026",
-        "title": "Incoming AI/ML Digital Technology Intern",
+        "title": "AI/ML Platform Engineering Intern",
         "company": "Guardian Life",
         "location": "New York, NY • On-site",
         "bulletPoints": [
-          "Developing GenAI applications and digital assistants to streamline internal workflows.",
-          "Researching NLP and LLM technologies for application in global financial services and insurance."
+          "Building a backend middleware system for LLM invocation services to monitor, enforce, and govern token usage across Amazon Bedrock models in development environments.",
+          "Implementing real-time token tracking, per-user/model usage aggregation, threshold-based alerting, and request blocking to improve cost control and operational governance for GenAI infrastructure.",
+          "Developing supporting platform components including scalable usage-tracking pipelines, alerting integrations (SNS/email/Slack), and dashboards for visibility into consumption patterns and top users.",
+          "Researching and developing GenAI, NLP, and LLM-based applications to streamline internal workflows and support AI platform initiatives in financial services."
         ],
-        "tags": ["AI/ML", "LLM", "NLP", "Python", "Java", "Software"]
+      "tags": ["AI/ML", "LLM", "NLP", "Python", "Java", "AWS", "Backend", "Platform Engineering"]
       },
       {
         "id": "experience-2",
