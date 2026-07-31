@@ -3,7 +3,7 @@
       {
         "id": "experience-1",
         "type": "experience",
-        "dataTags": "python java aws amazon-bedrock cloudwatch ai-observability llm-infrastructure machine-learning nlp backend-systems middleware data-pipelines data-cleaning data-normalization usage-monitoring alerting ai-governance data-governance finops cost-attribution amazon-eks kubernetes jenkins ci-cd linux bash",
+        "dataTags": "python aws amazon-bedrock cloudwatch ai-observability llm-infrastructure machine-learning nlp backend-systems middleware data-pipelines data-cleaning data-normalization usage-monitoring alerting ai-governance data-governance finops cost-attribution amazon-eks kubernetes jenkins ci-cd postgreSQL",
         "date": "May – Aug 2026",
         "title": "AI/ML Platform Engineering Intern",
         "company": "Guardian Life",
@@ -16,7 +16,6 @@
         ],
         "tags": [
     "Python",
-    "Java",
     "AWS",
     "Amazon Bedrock",
     "CloudWatch",
@@ -32,6 +31,7 @@
     "Amazon EKS",
     "Kubernetes",
     "Jenkins",
+    "PostgreSQL",
     "CI/CD"
   ]
       },
