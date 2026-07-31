@@ -3,7 +3,7 @@
       {
         "id": "experience-1",
         "type": "experience",
-        "dataTags": "ml nlp python ai java software",
+        "dataTags": "python java aws amazon-bedrock cloudwatch ai-observability llm-infrastructure machine-learning nlp backend-systems middleware data-pipelines data-cleaning data-normalization usage-monitoring alerting ai-governance data-governance finops cost-attribution amazon-eks kubernetes jenkins ci-cd linux bash",
         "date": "May – Aug 2026",
         "title": "AI/ML Platform Engineering Intern",
         "company": "Guardian Life",
@@ -14,12 +14,31 @@
           "Developing supporting platform components including scalable usage-tracking pipelines, alerting integrations (SNS/email/Slack), and dashboards for visibility into consumption patterns and top users.",
           "Researching and developing GenAI, NLP, and LLM-based applications to streamline internal workflows and support AI platform initiatives in financial services."
         ],
-      "tags": ["AI/ML", "LLM", "NLP", "Python", "Java", "AWS", "Backend", "Platform Engineering"]
+        "tags": [
+    "Python",
+    "Java",
+    "AWS",
+    "Amazon Bedrock",
+    "CloudWatch",
+    "AI Observability",
+    "LLM Infrastructure",
+    "Backend Systems",
+    "Middleware",
+    "Data Pipelines",
+    "AI Governance",
+    "Data Governance",
+    "Usage Monitoring",
+    "FinOps",
+    "Amazon EKS",
+    "Kubernetes",
+    "Jenkins",
+    "CI/CD"
+  ]
       },
       {
         "id": "experience-2",
         "type": "experience",
-        "dataTags": "javascript web development html css algorithm design product development frontend ux/ui collaboration leadership project management",
+        "dataTags": "javascript full-stack-development ui-design algorithms oop product-development",
         "date": "Oct 2023 – Present",
         "title": "Product Developer, Treasurer, Co-Founder",
         "company": "VC Ping Pong Club",
@@ -29,7 +48,13 @@
           "Enabled dynamic match generation, real-time roster management, and leaderboard tracking for 50+ participants.",
           "Manage financial operations and fund allocation, driving a 141% increase in club participation since inception."
         ],
-        "tags": ["JavaScript", "Web Development", "HTML", "CSS", "Algorithm Design", "Product Development", "Frontend", "UX/UI", "Collaboration", "Leadership", "Project Management"],
+        "tags": [
+  "JavaScript",
+  "Full-Stack Development",
+  "UI Design",
+  "Algorithms",
+  "Object-Oriented Programming"
+],
         "links": [
           {
             "text": "GitHub",
@@ -46,7 +71,7 @@
       {
         "id": "experience-3",
         "type": "experience",
-        "dataTags": "python ml hpc regression analysis multimodal data data science neuroscience",
+        "dataTags": "python machine-learning multimodal-ml predictive-modeling regression-analysis feature-engineering model-evaluation hyperparameter-tuning pca statistical-modeling pytorch hpc neuroimaging cross-validation experimental-design statistical-testing nlp",
         "date": "Jun – Aug 2025",
         "title": "Applied Machine Learning Research Intern",
         "company": "UChicago Data Science Institute",
@@ -57,7 +82,25 @@
           "Ranked 27th of 200+ international teams in the 2025 Algonauts Challenge for brain activity prediction.",
           "Ran large experiment sweeps on high-performance computing clusters and presented findings at a research symposium."
         ],
-        "tags": ["Python", "ML", "HPC", "Regression Analysis", "Multimodal Data", "Data Science", "Neuroscience"],
+        "tags": [
+  "Python",
+  "Machine Learning",
+  "Multimodal ML",
+  "Predictive Modeling",
+  "Regression Analysis",
+  "Feature Engineering",
+  "Model Evaluation",
+  "Hyperparameter Tuning",
+  "PCA",
+  "Statistical Modeling",
+  "PyTorch",
+  "High Performance Computing",
+  "Neuroimaging",
+  "Cross Validation",
+  "Experimental Design",
+  "Statistical Testing",
+  "NLP"
+],
         "links": [
           {
             "text": "GitHub",
@@ -84,7 +127,10 @@
           "Collaborate with interdisciplinary teams of authors, scientific editors, and artists to streamline the revision process and optimize clarity.",
           "Manage the editing lifecycle from initial drafts to final publication, consistently meeting deadlines and upholding quality standards."
         ],
-        "tags": ["Scientific Writing", "Editing", "Neuroscience", "Communication", "Collaboration", "Research Translation"],
+        "tags": [
+  "Experimental Design",
+  "Neuroimaging"
+],
         "links": [
           {
             "text": "Broken Heart Syndrome",
@@ -135,7 +181,7 @@
       {
         "id": "experience-7",
         "type": "experience",
-        "dataTags": "r data analysis visualization ggplot2 tidyr dplyr clustering sentiment analysis statistics",
+        "dataTags": "r predictive-modeling feature-engineering statistical-modeling data-cleaning data-visualization clustering sentiment-analysis",
         "date": "Aug – Sep 2024",
         "title": "Data Analysis & Consumer Insights Intern",
         "company": "Beats by Dre",
@@ -145,7 +191,16 @@
           "Developed visually engaging visualizations using ggplot2 and tidyr to present complex trends.",
           "Performed rigorous data cleaning and preparation leveraging dplyr for streamlined manipulation."
         ],
-        "tags": ["R", "Data Analysis", "Visualization", "ggplot2", "tidyr", "dplyr", "Clustering", "Sentiment Analysis", "Statistics"],
+        "tags": [
+  "R",
+  "Predictive Modeling",
+  "Feature Engineering",
+  "Statistical Modeling",
+  "Data Cleaning",
+  "Data Visualization",
+  "Clustering",
+  "Sentiment Analysis"
+],
         "links": [
           {
             "text": "GitHub",
@@ -177,7 +232,11 @@
               "Created a peripheral-awareness UI using translucency, blur, and motion to shift temporal monitoring to peripheral vision and reduce central executive load.",
               "Integrated micro-reactive cursor physics that establishes ambient sensorimotor feedback, reinforcing engagement without gamification."
             ],
-            "tags": ["p5.js", "Web Audio API", "HCI", "Neuro-computing", "Frontend", "UX/UI", "JavaScript", "Cognitive Modeling", "Interactive Design"],
+            "tags": [
+  "JavaScript",
+  "UI Design",
+  "Experimental Design"
+],
             "links": [
               {
                 "text": "GitHub",
@@ -194,7 +253,7 @@
           {
             "id": "project-2",
             "type": "project",
-            "dataTags": "python pytorch ml hpc fmri neuroimaging regression analysis nlp cnn transformers multimodal data",
+            "dataTags": "python pytorch machine-learning multimodal-ml predictive-modeling regression-analysis feature-engineering model-evaluation hyperparameter-tuning pca statistical-modeling nlp neuroimaging hpc cross-validation experimental-design statistical-testing",
             "date": "Jun – Aug 2025",
             "title": "Predicting Neural Responses to Multimodal Stimuli",
             "award": "27th/200+ teams in 2025 Algonauts Challenge",
@@ -207,7 +266,26 @@
               "Integrated longer temporal context windows to improve generalization on held-out stimuli.",
               "Conducted in the <a href=\"https://mcnlab.uchicago.edu/\" target=\"_blank\">Computational Affective and Neuroscience Lab</a> at UChicago under mentorship from <a href=\"https://psychology.uchicago.edu/directory/yuan-chang-leong\" target=\"_blank\">Yuan Chang Leong</a> and <a href=\"https://psychology.uchicago.edu/directory/Monica-Rosenberg\" target=\"_blank\">Monica Rosenberg</a>, in collaboration with Olivia Sopala."
             ],
-            "tags": ["Python", "PyTorch", "ML", "HPC", "fMRI", "Neuroimaging", "Regression Analysis", "NLP", "CNN", "Transformers", "Multimodal Data"],
+            
+"tags": [
+  "Python",
+  "PyTorch",
+  "Machine Learning",
+  "Multimodal ML",
+  "Predictive Modeling",
+  "Regression Analysis",
+  "Feature Engineering",
+  "Model Evaluation",
+  "Hyperparameter Tuning",
+  "PCA",
+  "Statistical Modeling",
+  "NLP",
+  "Neuroimaging",
+  "High Performance Computing",
+  "Cross Validation",
+  "Experimental Design",
+  "Statistical Testing"
+],
             "links": [
               {
                 "text": "GitHub",
@@ -219,7 +297,7 @@
           {
             "id": "project-3",
             "type": "project",
-            "dataTags": "javascript html css web development frontend product development ux ui algorithms",
+            "dataTags": "javascript full-stack-development ui-design algorithms oop",
             "date": "Apr 2025",
             "title": "Ping Pong Tournament Management System",
             "award": false,
@@ -233,7 +311,13 @@
               "Reduced organizer workload by <b>80%</b> and enabled smooth operation of large multi-round club tournaments.",
               "Designed a responsive UI supporting both desktop and mobile coordination for on-site event management."
             ],
-            "tags": ["JavaScript", "HTML", "CSS", "Web Development", "Frontend", "Product Development", "UX/UI", "Algorithms"],
+            "tags": [
+  "JavaScript",
+  "Full-Stack Development",
+  "UI Design",
+  "Algorithms",
+  "Object-Oriented Programming"
+],
             "links": [
               {
                 "text": "GitHub",
@@ -250,7 +334,7 @@
       {
         "id": "project-4",
         "type": "project",
-        "dataTags": "java android sdk mvc architecture product design mobile app development algorithms ux ui software engineering",
+        "dataTags": "java android-development mvc oop ui-design algorithms software-engineering",
         "date": "Sep – Dec 2024",
         "title": "Pantry Pal: Kitchen Application",
         "award": "People's Choice Award @ NYCWiC 2025",
@@ -263,7 +347,13 @@
           "Developed persistent local storage and a clean interactive UI to ensure reliability, scalability, and intuitive everyday use.",
           "Presented the project at <b>NYCWiC 2025</b>, earning the <b>People’s Choice Award</b> for real-world usability and user-centered design."
         ],
-        "tags": ["Java", "Android SDK", "MVC Architecture", "Product Design", "Mobile App Development", "Algorithms", "UX/UI", "Software Engineering"],
+        "tags": [
+  "Java",
+  "Android Development",
+  "MVC Architecture",
+  "Object-Oriented Programming",
+  "UI Design"
+],
         "links": [
           {
             "text": "GitHub",
@@ -275,7 +365,7 @@
       {
         "id": "project-5",
         "type": "project",
-        "dataTags": "r ggplot2 tidyr data analysis clustering sentiment analysis statistics visualization consumer insights",
+        "dataTags": "r predictive-modeling feature-engineering statistical-modeling data-cleaning data-visualization clustering sentiment-analysis",
         "date": "Aug – Oct 2024",
         "title": "Beats Consumer Insights Analysis",
         "award": false,
@@ -285,7 +375,16 @@
           "Delivered data-driven recommendations through 14 clear visualizations using <b>ggplot2 and tidyr</b>.",
           "Optimized models for accurate results on large customer datasets of wireless speaker preferences."
         ],
-        "tags": ["R", "ggplot2", "tidyr", "Data Analysis", "Clustering", "Sentiment Analysis", "Statistics", "Visualization", "Consumer Insights"],
+        "tags": [
+  "R",
+  "Predictive Modeling",
+  "Feature Engineering",
+  "Statistical Modeling",
+  "Data Cleaning",
+  "Data Visualization",
+  "Clustering",
+  "Sentiment Analysis"
+],
         "links": [
           {
             "text": "GitHub",
