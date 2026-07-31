@@ -32,8 +32,11 @@
     "Kubernetes",
     "Jenkins",
     "PostgreSQL",
+    "Data Normalization",
+    "Data Visualization",
     "Full-Stack Development",
-    "CI/CD,"
+    "UI Design",
+    "CI/CD"
   ]
       },
       {
@@ -100,6 +103,7 @@
   "Cross Validation",
   "Experimental Design",
   "Statistical Testing",
+  "Data Pipelines",
   "NLP"
 ],
         "links": [
@@ -200,7 +204,8 @@
   "Data Cleaning",
   "Data Visualization",
   "Clustering",
-  "Sentiment Analysis"
+  "Sentiment Analysis",
+  "FinOps"
 ],
         "links": [
           {
@@ -280,11 +285,13 @@
   "Hyperparameter Tuning",
   "PCA",
   "Statistical Modeling",
+  "Data Cleaning",
   "NLP",
   "Neuroimaging",
   "High Performance Computing",
   "Cross Validation",
   "Experimental Design",
+  "Data Pipelines",
   "Statistical Testing"
 ],
             "links": [
@@ -353,6 +360,7 @@
   "Android Development",
   "MVC Architecture",
   "Object-Oriented Programming",
+  "Full-Stack Development",
   "UI Design"
 ],
         "links": [
@@ -384,6 +392,7 @@
   "Data Cleaning",
   "Data Visualization",
   "Clustering",
+  "Data Pipelines",
   "Sentiment Analysis"
 ],
         "links": [
