@@ -354,19 +354,69 @@
         .social-links a:hover { color: var(--accent); }
 
 
-        /* Targeted updates for cleaner certification presentation */
-        .role-card.cert-clean-card {
-            background: transparent;
-            border: none;
-            box-shadow: none;
-            padding: 0;
-            width: fit-content !important;
+        /* Professional Certifications */
+
+        .certifications {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        .cert-link {
-            margin: 0;
-            white-space: normal;
-            word-break: break-word;
+        .cert-provider {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-light);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .cert-provider i {
+            color: #0A66C2;
+            font-size: 1.4rem;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+
+            padding: 1rem 1.25rem;
+
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+
+            text-decoration: none;
+            color: var(--text-main);
+
+            transition: all 0.25s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            background: var(--soft-accent);
+            box-shadow: 0 8px 20px rgba(142,33,50,0.12);
+        }
+
+        .cert-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .cert-arrow {
+            color: var(--accent);
+            font-size: 0.95rem;
+            flex-shrink: 0;
         }
 
 
@@ -520,105 +570,112 @@
     <section>
 
         <h2>Professional Certifications</h2>
-
-        <div class="current-role" style="margin-top: 0; gap: 1.5rem;">
-
-
-            <div class="role-card cert-clean-card">
     
-                <div class="company-logo-container">
-                    <i class="fab fa-linkedin-in" style="font-size: 1.4rem; color: #0A66C2;"></i>
-                </div>
+        <div class="certifications">
+    
+            <div class="cert-provider">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn Learning</span>
+            </div>
+    
+            <div class="cert-grid">
     
                 <a href="https://www.linkedin.com/learning/certificates/f76e820614164f1d7997251de6f2fa015dbf6e869f8512aefdce1ce7fe18c0e1?trk=share_certificate"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="skill-pill cert-link">
-                   Advanced LLMs with Retrieval Augmented Generation (RAG): Practical Projects for AI Applications
+                   class="cert-card">
+    
+                    <span class="cert-title">
+                        Advanced LLMs with RAG
+                    </span>
+    
+                    <i class="fas fa-arrow-up-right-from-square cert-arrow"></i>
+    
                 </a>
     
-            </div>
-
-            <div class="role-card cert-clean-card">
+                <a href="https://www.linkedin.com/learning/certificates/07932acaa87077fc81d2ee9c35c09f5db0e9703b0ab7ba72e0b7ed44c617887c?trk=share_certificate"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="cert-card">
     
-                <div class="company-logo-container">
-                    <i class="fab fa-linkedin-in" style="font-size: 1.4rem; color: #0A66C2;"></i>
-                </div>
+                    <span class="cert-title">
+                        Building AI Agents
+                    </span>
+    
+                    <i class="fas fa-arrow-up-right-from-square cert-arrow"></i>
+    
+                </a>
     
                 <a href="https://www.linkedin.com/learning/certificates/2e766406c5b5070d2592f4ebc6aabf68725ed571070aba8bdead7f6233f4b0e0?trk=share_certificate"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="skill-pill cert-link">
-                   Model Context Protocol (MCP): Hands-On with Agentic AI
+                   class="cert-card">
+    
+                    <span class="cert-title">
+                        Model Context Protocol (MCP)
+                    </span>
+    
+                    <i class="fas fa-arrow-up-right-from-square cert-arrow"></i>
+    
                 </a>
-    
-            </div>
-    
-            <div class="role-card cert-clean-card">
-    
-                <div class="company-logo-container">
-                    <i class="fab fa-linkedin-in" style="font-size: 1.4rem; color: #0A66C2;"></i>
-                </div>
-    
-                <a href="https://www.linkedin.com/learning/certificates/0ab74fb48af9ce2c2cbadc7db94a22735c6513af871e4009371d123b0561e6f1?trk=share_certificate"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="skill-pill cert-link">
-                   AWS and React: Creating Full-Stack Apps
-                </a>
-    
-            </div>
-
-                
-            <div class="role-card cert-clean-card">
-    
-                <div class="company-logo-container">
-                    <i class="fab fa-linkedin-in" style="font-size: 1.4rem; color: #0A66C2;"></i>
-                </div>
     
                 <a href="https://www.linkedin.com/learning/certificates/2781ffa3ec4af079153d0ba9c8c3428dc5e8df24296f275e95615fa6758fc059?trk=share_certificate"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="skill-pill cert-link">
-                   Agentic AI Fundamentals: Architectures, Frameworks, and Applications
+                   class="cert-card">
+    
+                    <span class="cert-title">
+                        Agentic AI Fundamentals
+                    </span>
+    
+                    <i class="fas fa-arrow-up-right-from-square cert-arrow"></i>
+    
                 </a>
     
-            </div>
-
-            <div class="role-card cert-clean-card">
+                <a href="https://www.linkedin.com/learning/certificates/0ab74fb48af9ce2c2cbadc7db94a22735c6513af871e4009371d123b0561e6f1?trk=share_certificate"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="cert-card">
     
-                <div class="company-logo-container">
-                    <i class="fab fa-linkedin-in" style="font-size: 1.4rem; color: #0A66C2;"></i>
-                </div>
+                    <span class="cert-title">
+                        AWS & React: Full-Stack Apps
+                    </span>
+    
+                    <i class="fas fa-arrow-up-right-from-square cert-arrow"></i>
+    
+                </a>
     
                 <a href="https://www.linkedin.com/learning/certificates/980bb05da718d1e0333d58812f786c0258be29044273d12d3297afcc8335abdb?trk=share_certificate"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="skill-pill cert-link">
-                   Power BI Essential Training (+ CPE Credit)
+                   class="cert-card">
+    
+                    <span class="cert-title">
+                        Power BI Essentials
+                    </span>
+    
+                    <i class="fas fa-arrow-up-right-from-square cert-arrow"></i>
+    
+                </a>
+    
+                <a href="https://www.linkedin.com/learning/certificates/5115dd8f985c2413066c73191af693e091511b603249fa65094570ee3ff2adba?trk=share_certificate"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="cert-card">
+    
+                    <span class="cert-title">
+                        Applied Machine Learning
+                    </span>
+    
+                    <i class="fas fa-arrow-up-right-from-square cert-arrow"></i>
+    
                 </a>
     
             </div>
     
-                <div class="role-card cert-clean-card">
-        
-                    <div class="company-logo-container">
-                        <i class="fab fa-linkedin-in" style="font-size: 1.4rem; color: #0A66C2;"></i>
-                    </div>
-        
-                    <a href="https://www.linkedin.com/learning/certificates/5115dd8f985c2413066c73191af693e091511b603249fa65094570ee3ff2adba?trk=share_certificate"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="skill-pill cert-link">
-                       Applied Machine Learning: Algorithms
-                    </a>
-        
-                </div>    
-    
         </div>
     
     </section>
-
 
     <section>
 
