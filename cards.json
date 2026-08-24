@@ -9,9 +9,9 @@
         "company": "Guardian Life",
         "location": "New York, NY • On-site",
         "bulletPoints": [
-          "Designed and delivered an AI observability and governance platform that unified fragmented AWS CloudWatch and Bedrock telemetry into a trusted analytics system, enabling executive visibility into LLM usage, cost drivers, ownership attribution, and AI governance across 100K+ invocation records where no centralized reporting previously existed."
-          "Architected an end-to-end ingestion pipeline spanning parsing, normalization, deduplication, enrichment, and persistence, achieving 100% attribution coverage across users, applications, and agents while improving reporting integrity through identity reconciliation, partitioning controls, and resilient backfill/recovery mechanisms."
-          "Built a cache-aware Bedrock cost intelligence engine and governance framework with pricing refresh logic, lifecycle monitoring, and alerting workflows, providing 100% pricing coverage for 60+ observed models, delivering actionable cost visibility for executives, and surfacing legacy-model and high-token-consumption risks to support FinOps and operational decision-making."
+          "Designed and delivered an AI observability and governance platform that unified fragmented AWS CloudWatch and Bedrock telemetry into a trusted analytics system, enabling executive visibility into LLM usage, cost drivers, ownership attribution, and AI governance across 100K+ invocation records where no centralized reporting previously existed.",
+          "Architected an end-to-end ingestion pipeline spanning parsing, normalization, deduplication, enrichment, and persistence, achieving 100% attribution coverage across users, applications, and agents while improving reporting integrity through identity reconciliation, partitioning controls, and resilient backfill/recovery mechanisms.",
+          "Built a cache-aware Bedrock cost intelligence engine and governance framework with pricing refresh logic, lifecycle monitoring, and alerting workflows, providing 100% pricing coverage for 60+ observed models, delivering actionable cost visibility for executives, and surfacing legacy-model and high-token-consumption risks to support FinOps and operational decision-making.",
           "Worked across the AI platform engineering stack using AWS, Amazon EKS, Jenkins CI/CD, and backend services to build, deploy, and maintain production systems supporting scalable LLM infrastructure."
         ],
         "tags": [
